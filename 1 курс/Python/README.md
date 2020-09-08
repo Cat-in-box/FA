@@ -8,4 +8,11 @@
 * [Практика]
 
 ## II семестр
-* [Практика](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 8.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 9.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 10.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 11.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 12.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 12. ЗАЩИТА.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 13.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
+* [Практика 14.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python)
