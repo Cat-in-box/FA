@@ -6,6 +6,12 @@
 
 ## I семестр
 * [Практика 1.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_1)
+* [Практика 2.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_2)
+* [Практика 3.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_3)
+* [Практика 4.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_4)
+* [Практика 5.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_5)
+* [Практика 6.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_6)
+* [Практика 7.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_7)
 
 ## II семестр
 * [Практика 8. Классы](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_8%20(1))
