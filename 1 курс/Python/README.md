@@ -5,7 +5,13 @@
 Задания по курсу
 
 ## I семестр
-* [Практика]
+* [Практика 1. Строки](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_1)
+* [Практика 2. Условия и циклы](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_2)
+* [Практика 3. Списки](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_3)
+* [Практика 4. Словари, множества, кортежи](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_4)
+* [Практика 5. Функции и работа с файлами](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_5)
+* [Практика 6. Обработка ошибок](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_6)
+* [Практика 7. Коллекции](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_7)
 
 ## II семестр
 * [Практика 8. Классы](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_8%20(1))
