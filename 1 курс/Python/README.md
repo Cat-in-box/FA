@@ -5,7 +5,7 @@
 Задания по курсу
 
 ## I семестр
-* [Практика]
+* [Практика 1.](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_1)
 
 ## II семестр
 * [Практика 8. Классы](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_8%20(1))
