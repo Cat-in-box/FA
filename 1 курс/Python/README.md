@@ -21,5 +21,5 @@
 представления успеваемости студентов](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_11%20(4))
 * [Практика 12. Структуры, массивы, списки](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_12%20(5))
 * [Практика 12 (защита). Игра шашки](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_12%20(5)%20%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0%20%D0%A8%D0%90%D0%A8%D0%9A%D0%98)
-* [Практика 13. Деревья](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_13%20(6)%20trees)
-* [Практика 14. Хэш](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_14%20(7)%20hash)
+* [Практика 13. Деревья](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_13%20(6))
+* [Практика 14. Хэш](https://github.com/Cat-in-box/Financial-University/tree/master/1%20%D0%BA%D1%83%D1%80%D1%81/Python/Pract_14%20(7))
