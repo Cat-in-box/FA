@@ -1,4 +1,4 @@
-package my;
+package Task_1;
 
 public class Matrix {
     private int matr[][];
