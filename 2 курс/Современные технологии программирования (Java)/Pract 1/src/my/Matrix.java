@@ -1,4 +1,4 @@
-package my.company;
+package my;
 
 public class Matrix {
     private int matr[][];
@@ -25,7 +25,7 @@ public class Matrix {
             for (int j = 0; i < matr[i].length; j++){
                 System.out.print(matr[j][i]);
             }
-        System.out.println("");
+            System.out.println("");
         }
     }
 }
