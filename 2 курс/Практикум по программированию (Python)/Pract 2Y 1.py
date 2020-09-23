@@ -6,19 +6,17 @@ c = Canvas(root, width=600, height=600, bg="white")
 c.pack()
  
 ball = c.create_oval(100, 100, 500, 500, fill='yellow')
-dot = c.create_oval(280, 80, 320, 120, fill='black')
+dot = c.create_oval(490, 300, 510, 320, fill='black')
 
 n = 0
-x = 300
-y = 100
 
 def motion():
     global n
     n-=0.1
-    x = 200*math.cos(n)
-    y = 200*math.sin(n)
+    x = 20 * math.sin(n)
+    y = 20 * math.cos(n)
     c.move(dot, x, y)
-    root.after(10, motion)
+    root.after(20, motion)
  
 motion()
 
