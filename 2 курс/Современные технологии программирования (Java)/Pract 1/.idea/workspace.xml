@@ -28,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,7 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Task_3.Main" />
+      <module name="Pract 1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Task_3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Task_1.Main" />
       <module name="Pract 1" />
@@ -54,6 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -82,21 +97,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601325540576">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1602582136237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601325540576" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601325540576">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602582136237" />
+    <state width="768" height="210" key="GridCell.Tab.0.bottom" timestamp="1602584531823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601325540576" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601325540575">
+    <state width="768" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602584531823" />
+    <state width="768" height="210" key="GridCell.Tab.0.center" timestamp="1602584531823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601325540575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601325540576">
+    <state width="768" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602584531823" />
+    <state width="768" height="210" key="GridCell.Tab.0.left" timestamp="1602584531823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601325540576" />
+    <state width="768" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602584531823" />
+    <state width="768" height="210" key="GridCell.Tab.0.right" timestamp="1602584531823">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="768" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602584531823" />
   </component>
 </project>

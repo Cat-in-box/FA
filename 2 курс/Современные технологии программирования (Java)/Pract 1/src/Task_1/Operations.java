@@ -4,15 +4,21 @@ public class Operations {
     private int A[][];
     private int B[][];
 
-    public Operations(int a[][], int b[][]) {
-        this.A = a;
-        this.B = b;
+    public Operations(Matrix a, Matrix b) {
+        this.A = a.matr;
+        this.B = b.matr;
     }
 
-    public int [][] Summ() {
+    public Matrix Summ(int x) {
+        if (x < 0) {
+            x = -1;
+        }
+        else {
+            x = 1;
+        }
         int m = this.A.length;
         int n = this.A[0].length;
-        if ((this.A.length != this.B.length) & (this.A[0].length != this.B[0].length)) {
+        if ((this.A.length != this.B.length) | (this.A[0].length != this.B[0].length)) {
             System.out.println("Матрицы разного размера, мы их обрезали");
 
             if (this.A.length < this.B.length) {
@@ -29,12 +35,15 @@ public class Operations {
                 n = this.B[0].length;
             }
         }
-        int C[][] = new int [m][n];
+        Matrix C = new Matrix(m,n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                C[i][j] = this.A[i][j] + this.B[i][j];
+                C.matr[i][j] = this.A[i][j] + x*this.B[i][j];
             }
         }
         return C;
     }
+    //public Matrix Mult() {
+
+    //}
 }

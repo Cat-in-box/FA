@@ -3,7 +3,7 @@ package Task_1;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Matrix {
-    private int matr[][];
+    public int matr[][];
 
     public Matrix(int m, int n) {
         this.matr = new int[m][n];
@@ -20,9 +20,10 @@ public class Matrix {
     public void PrintMatrix() {
         for (int i = 0; i < matr.length; i++) {
             for (int j = 0; j < matr[i].length; j++){
-                System.out.print(matr[j][i] + " ");
+                System.out.print(matr[i][j] + " ");
             }
             System.out.println("");
         }
+        System.out.println("");
     }
 }

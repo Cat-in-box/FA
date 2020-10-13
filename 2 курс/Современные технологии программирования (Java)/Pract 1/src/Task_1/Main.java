@@ -9,5 +9,13 @@ public class Main {
         matrix1.Fill();
         matrix1.PrintMatrix();
 
+        Matrix matrix2 = new Matrix(5,4);
+        matrix2.Fill();
+        matrix2.PrintMatrix();
+
+        Operations Opr = new Operations(matrix1,matrix2);
+        Opr.Summ(-1).PrintMatrix();
+
+
     }
 }
