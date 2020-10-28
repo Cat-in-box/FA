@@ -1,5 +1,7 @@
 package Task_2;
 
+import com.sun.source.tree.Tree;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Vector {
@@ -32,18 +34,18 @@ public class Vector {
     //  return result;
     //}
 
-    public static Vector[] GTask (int N) {
+    public static void GTask (int N) {
         Vector Arr[] = new Vector[5];
-        private double a, b, c;
-        for (int i = 0; i < Arr.lenght(); i++){
-            boolean f = True;
+        double a, b, c;
+        for (int i = 0; i < Arr.length; i++){
+            boolean f = true;
             while (f) {
                 a = ThreadLocalRandom.current().nextDouble(0, 9 + 1);
                 b = ThreadLocalRandom.current().nextDouble(0, 9 + 1);
                 c = ThreadLocalRandom.current().nextDouble(0, 9 + 1);
                 Vector RandV = new Vector(a,b,c);
                 if (RandV.GetLength() == N) {
-                    f = False;
+                    f = false;
 
                 }
             }

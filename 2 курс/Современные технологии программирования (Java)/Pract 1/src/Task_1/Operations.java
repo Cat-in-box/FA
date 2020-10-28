@@ -43,7 +43,33 @@ public class Operations {
         }
         return C;
     }
-    //public Matrix Mult() {
 
-    //}
+    public Matrix Mult() {
+        int m = this.A.length;
+        int n = this.A[0].length;
+        if ((this.A.length != this.B.length) | (this.A[0].length != this.B[0].length)) {
+            System.out.println("Матрицы разного размера, мы их обрезали");
+
+            if (this.A.length < this.B.length) {
+                m = this.A.length;
+            }
+            else {
+                m = this.B.length;
+            }
+
+            if (this.A[0].length < this.B[0].length) {
+                n = this.A[0].length;
+            }
+            else {
+                n = this.B[0].length;
+            }
+        }
+        Matrix C = new Matrix(m,n);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                C.matr[i][j] = this.A[i][j] + this.B[i][j];
+            }
+        }
+        return C;
+    }
 }
