@@ -1,6 +1,6 @@
 # Операционные системы семейства UNIX и сетевые технологии
 
-<img src="https://github.com/Cat-in-box/Financial-University/blob/png/git%20linux.png" align="right" width=400 height=387/>
+<img src="https://github.com/Cat-in-box/Financial-University/blob/png/git%20linux.png" align="right" width=400 height=436/>
 
 Тусим в cmd Linux Mint
 
