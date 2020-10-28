@@ -1,0 +1,363 @@
+    1  cat /etc/shells
+    2  sh
+    3  ps
+    4  sh
+    5  find . -type f
+    6  cd
+    7  ls /dev
+    8  cd /
+    9  ls
+   10  /bin
+   11  cd /bin
+   12  ls ls
+   13  ls - la ls
+   14  ls -la ls
+   15  ls cd
+   16  cd /boot
+   17  ls
+   18  cd
+   19  ls /etc
+   20  ls
+   21  ls -la
+   22  ls / > $HOME/filelist.txt
+   23  cat filelist.txt
+   24  cd
+   25  ls -r .
+   26  ls -R .
+   27  pwd
+   28  mkdir src dst tmp
+   29  ls
+   30  rm test*
+   31  echo "Privet" >  ./src/f1
+   32  ls src
+   33  ls f1
+   34  cat f1
+   35  echo "Meow" > ./user.txt
+   36  ls
+   37  echo "MeowMeow" > ./root.txt
+   38  ls
+   39  echo "Marshmeowllow" > ./stud.txt
+   40  ls
+   41  cp user.txt srt
+   42  ls
+   43  /srt
+   44  /src
+   45  cd /src
+   46  cd ./src
+   47  ls
+   48  cd
+   49  cp user.txt src
+   50  cd ./src
+   51  ls
+   52  cd
+   53  lc
+   54  ls
+   55  cp ctud.txt src
+   56  cp stud.txt src
+   57  cp root.txt src
+   58  ls
+   59  cd ./src
+   60  ls
+   61  cat root.txt
+   62  cd dst
+   63  ls
+   64  ls ../src
+   65  cd
+   66  cd dst
+   67  ls
+   68  ls.../src
+   69  ls ../src
+   70  ls ../src/root.txt
+   71  ln ../src/root.txt root1.txt
+   72  ln ../src/stud.txt stud1.txt
+   73  ln ../src/user.txt user1.txt
+   74  ls -li .
+   75  ls -li root1.txt
+   76  ls -i root1.txt
+   77  ls -i ../src/root.txt
+   78  cd ..
+   79  ln -s ../src/root.txt root2.txt
+   80  ln -s ../src/stud.txt stud2.txt
+   81  ln -s ../src/user.txt user2.txt
+   82  ls
+   83  ls -la .
+   84  ls -la
+   85  tar -cvzf myfile src
+   86  history
+   87  history > ZhevaginaPI19-4.txt
+   88  ls
+   89  echo "Meow2" > u2.txt
+   90  cat u2.txt
+   91  exit
+   92  ls -l stud.txt
+   93  ls -l *.txt
+   94  cat > lesson5.txt
+   95  ls -l lesson5.txt
+   96  chmod 600 lesson5.txt
+   97  ls - l lesson5.txt
+   98  ls -l lesson5.txt
+   99  chmod g+rw lesson5.txt
+  100  ls -l lesson5.txt
+  101  chmod o=u lesson5.txt
+  102  ls -l lesson5.txt
+  103  chmod o-w lesson5.txt
+  104  ls -l lesson5.txt
+  105  chmod 777 lesson5.txt
+  106  ls -l lesson5.txt
+  107  chmod 0 lesson5.txt
+  108  ls -l lesson5.txt
+  109  rm lesson5.txt
+  110  ls l*
+  111  history
+  112  cat > lesson5.txt
+  113  ls l*
+  114  ls -l lesson5.txt
+  115  cmod 600 lesson5.txt
+  116  chmod 600 lesson5.txt
+  117  ls -l lesson5.txt
+  118  chmod 754 lesson5.txt
+  119  ls -l lesson5.txt
+  120  sudo shown root:root lesson5.txt
+  121  sudo chown root:root lessonn5.txt
+  122  sudo chown root:root lesson5.txt
+  123  ls -l lesson5.txt
+  124  chown anastasiya:anastasiya lesson5.txt
+  125  cat lesson5.txt
+  126  rm lesson5.txt
+  127  louch lesson5.txt
+  128  touch lesson5.txt
+  129  sudo chgrp root lesson5.txt
+  130  ls -l lesson5.txt
+  131  cd
+  132  touch u1
+  133  rm u1
+  134  touch u1.txt
+  135  touch u2.txt
+  136  ls -l
+  137  ls -l > listing1.txt
+  138  su root
+  139  5
+  140  su root
+  141  ls -l * > listing1.txt
+  142  sudo su -
+  143  ls
+  144  touch u3
+  145  ls -l * > listing1.txt
+  146  rm u3
+  147  touch u3.txt
+  148  ls -l * > listing1.txt
+  149  ls
+  150  cd ..
+  151  ls
+  152  cd ./root
+  153  cd
+  154  ls
+  155  sudo su -
+  156  ls
+  157  ls -l * >> listing1.txt
+  158  echo "Meow" > u1.txt
+  159  cat u1.txt
+  160  echo "Marshmeowllow" > r1
+  161  sudo su -
+  162  echo "Meow1" > u1
+  163  echo "Marshmeowllow1" > r1
+  164  rm u1
+  165  echo "Meow1" > u1.txt
+  166  sudo su -
+  167  id
+  168  sudo su -
+  169  cd ..
+  170  cd shared
+  171  cd pub
+  172  cat [ur][123]
+  173  cd..
+  174  cd ..
+  175  \
+  176  history
+  177  cd ..
+  178  cd shared
+  179  cd upload
+  180  cd temp
+  181  cat [ur][123]
+  182  history > term0.txt
+ 
+ 
+Терминал 1
+ 
+    1  cat /etc/shells
+    2  sh
+    3  ps
+    4  sh
+    5  find . -type f
+    6  cd
+    7  ls /dev
+    8  cd /
+    9  ls
+   10  /bin
+   11  cd /bin
+   12  ls ls
+   13  ls - la ls
+   14  ls -la ls
+   15  ls cd
+   16  cd /boot
+   17  ls
+   18  cd
+   19  ls /etc
+   20  ls
+   21  ls -la
+   22  ls / > $HOME/filelist.txt
+   23  cat filelist.txt
+   24  cd
+   25  ls -r .
+   26  ls -R .
+   27  pwd
+   28  mkdir src dst tmp
+   29  ls
+   30  rm test*
+   31  echo "Privet" >  ./src/f1
+   32  ls src
+   33  ls f1
+   34  cat f1
+   35  echo "Meow" > ./user.txt
+   36  ls
+   37  echo "MeowMeow" > ./root.txt
+   38  ls
+   39  echo "Marshmeowllow" > ./stud.txt
+   40  ls
+   41  cp user.txt srt
+   42  ls
+   43  /srt
+   44  /src
+   45  cd /src
+   46  cd ./src
+   47  ls
+   48  cd
+   49  cp user.txt src
+   50  cd ./src
+   51  ls
+   52  cd
+   53  lc
+   54  ls
+   55  cp ctud.txt src
+   56  cp stud.txt src
+   57  cp root.txt src
+   58  ls
+   59  cd ./src
+   60  ls
+   61  cat root.txt
+   62  cd dst
+   63  ls
+   64  ls ../src
+   65  cd
+   66  cd dst
+   67  ls
+   68  ls.../src
+   69  ls ../src
+   70  ls ../src/root.txt
+   71  ln ../src/root.txt root1.txt
+   72  ln ../src/stud.txt stud1.txt
+   73  ln ../src/user.txt user1.txt
+   74  ls -li .
+   75  ls -li root1.txt
+   76  ls -i root1.txt
+   77  ls -i ../src/root.txt
+   78  cd ..
+   79  ln -s ../src/root.txt root2.txt
+   80  ln -s ../src/stud.txt stud2.txt
+   81  ln -s ../src/user.txt user2.txt
+   82  ls
+   83  ls -la .
+   84  ls -la
+   85  tar -cvzf myfile src
+   86  history
+   87  history > ZhevaginaPI19-4.txt
+   88  ls
+   89  echo "Meow2" > u2.txt
+   90  cat u2.txt
+   91  exit
+   92  history
+   93  history > term1.txt
+ 
+ 
+Терминал 2
+ 
+    1  5
+    2  who
+    3  pwd]
+    4  pwd
+    5  touch r1 r2 r3
+    6  ls
+    7  cat > r1
+    8  echo "Hello2" > r2
+    9  echo "Hello3" > r3
+   10  cat r2 r3
+   11  ls
+   12  pwd
+   13  mv r* /home/anastasiya
+   14  exit
+   15  cd /home/anastasiya
+   16  chmod ug-w u1
+   17  ls
+   18  chmod ug-w u1.txt
+   19  chmod ugo+w r1.txt
+   20  chmod ugo+w r1
+   21  ls -l
+   22  sudo chown root:root u1 u2
+   23  sudo chown root:root u1.txt u2.txt
+   24  /home/anastasiya
+   25  cd /home/anastasiya
+   26  sodo chown root:root u1.txt u2.txt
+   27  sudo chown root:root u1.txt u2.txt
+   28  id
+   29  cd
+   30  id
+   31  cd /home
+   32  ls
+   33  mkdir shared
+   34  ls
+   35  cd ./shared
+   36  ls
+   37  mkdir pub
+   38  mkdir upload
+   39  mkdir temp
+   40  ls
+   41  chown root:users pub
+   42  chown nobody:users upload
+   43  chown anastasiya:users temp
+   44  chmod 775 pub
+   45  chmod 130 upload
+   46  chmod 777 temp
+   47  ls -l
+   48  cd
+   49  lc
+   50  ls
+   51  ls -l
+   52  cd /home/anastasiya
+   53  ls
+   54  cp u1.txt /home/shared/pub
+   55  cp u2.txt /home/shared/pub
+   56  cp u3.txt /home/shared/pub
+   57  cp r1 /home/shared/upload
+   58  cp r2 /home/shared/pub
+   59  cp r1 /home/shared/pub
+   60  cp r3 /home/shared/pub
+   61  cp r2 /home/shared/upload
+   62  cp r3 /home/shared/upload
+   63  cp u1.txt /home/shared/upload
+   64  cp u2.txt /home/shared/upload
+   65  cp u3.txt /home/shared/upload
+   66  ls
+   67  cp r? /home/shared/temp
+   68  cp u?.txt /home/shared/temp
+   69  ..
+   70  cd ..
+   71  cd shared
+   72  cd pub
+   73  cat [ur][123]
+   74  cd ..
+   75  cd upload
+   76  cat [ur][123]
+   77  cd ..
+   78  cd temp
+   79  cat [ur][123]
+   80  history > term2.txt

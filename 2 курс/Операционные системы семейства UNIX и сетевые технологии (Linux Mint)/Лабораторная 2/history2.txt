@@ -1,0 +1,87 @@
+    1  cat /etc/shells
+    2  sh
+    3  ps
+    4  sh
+    5  find . -type f
+    6  cd
+    7  ls /dev
+    8  cd /
+    9  ls
+   10  /bin
+   11  cd /bin
+   12  ls ls
+   13  ls - la ls
+   14  ls -la ls
+   15  ls cd
+   16  cd /boot
+   17  ls
+   18  cd
+   19  ls /etc
+   20  ls
+   21  ls -la
+   22  ls / > $HOME/filelist.txt
+   23  cat filelist.txt
+   24  cd
+   25  ls -r .
+   26  ls -R .
+   27  pwd
+   28  mkdir src dst tmp
+   29  ls
+   30  rm test*
+   31  echo "Privet" >  ./src/f1
+   32  ls src
+   33  ls f1
+   34  cat f1
+   35  echo "Meow" > ./user.txt
+   36  ls
+   37  echo "MeowMeow" > ./root.txt
+   38  ls
+   39  echo "Marshmeowllow" > ./stud.txt
+   40  ls
+   41  cp user.txt srt
+   42  ls
+   43  /srt
+   44  /src
+   45  cd /src
+   46  cd ./src
+   47  ls
+   48  cd
+   49  cp user.txt src
+   50  cd ./src
+   51  ls
+   52  cd
+   53  lc
+   54  ls
+   55  cp ctud.txt src
+   56  cp stud.txt src
+   57  cp root.txt src
+   58  ls
+   59  cd ./src
+   60  ls
+   61  cat root.txt
+   62  cd dst
+   63  ls
+   64  ls ../src
+   65  cd
+   66  cd dst
+   67  ls
+   68  ls.../src
+   69  ls ../src
+   70  ls ../src/root.txt
+   71  ln ../src/root.txt root1.txt
+   72  ln ../src/stud.txt stud1.txt
+   73  ln ../src/user.txt user1.txt
+   74  ls -li .
+   75  ls -li root1.txt
+   76  ls -i root1.txt
+   77  ls -i ../src/root.txt
+   78  cd ..
+   79  ln -s ../src/root.txt root2.txt
+   80  ln -s ../src/stud.txt stud2.txt
+   81  ln -s ../src/user.txt user2.txt
+   82  ls
+   83  ls -la .
+   84  ls -la
+   85  tar -cvzf myfile src
+   86  history
+   87  history > history2.txt

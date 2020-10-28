@@ -1,0 +1,29 @@
+    1  ls -al 
+    2  rm r 
+    3  cat .bash_history 
+    4  rm .bash_history 
+    5  ls 
+    6  history
+    7  man ps
+    8  ps
+    9  ps -aux --sort -%mem | less
+   10  ps -aux --sort -%cpu | less
+   11  ps -aux | grep init
+   12  ps
+   13  ps -aux
+   14  ps -aux | grep nano
+   15  kill -15 1583
+   16  top
+   17  ps -aux | grep init
+   18  cd /
+   19  find / *.html
+   20  man bash
+   21  jobs
+   22  fg %4
+   23  jobs
+   24  ps -aux | grep find
+   25  kill -9 1621
+   26  jobs
+   27  history > history5.txt
+   28  cd
+   29  history > history5.txt
