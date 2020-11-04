@@ -10,3 +10,6 @@
 * [Занятие 3. Вычисления по кредитам](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203)
 * [Занятие 4. Задача на кредит, план погашения](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%204)
 * [Занятие 5. Начало работы в АБС Diasoft. Отчеты](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205)
+* [Занятие 6. Автоматизация операций в АБС. Технология выполнения расчета операций: Касса](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206)
+* [Занятие 7. Автоматизация операций в АБС. Технология выполнения расчета операций: Платеж поручения](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207)
+* [Занятие 8. Автоматизация операций в АБС. Картотека Конверсия](https://github.com/Cat-in-box/Financial-University/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%208)
