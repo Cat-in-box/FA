@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+# Планетарная модель
 from tkinter import *
 import math
 root = Tk()
