@@ -1,6 +1,5 @@
 # Банковские информационные системы
 
-<img src="https://github.com/Cat-in-box/Financial-University/blob/png/git%20bis.png" align="right" width=400 height=387/>
 <img src="https://github.com/Cat-in-box/Financial-University/blob/png/git%20bisnew.png" align="right" width=400 height=604/>
 
 Финансовые функции и банковские операции в Excel.
