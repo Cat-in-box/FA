@@ -1,0 +1,38 @@
+    1  history
+    2  mkdir src dst temp
+    3  ls
+    4  cd temp/
+    5  touch user.txt root.txt stud.txt
+    6  cp * ../src/
+    7  cd ../dst/
+    8  ln ../src/root.txt root
+    9  ln ../src/user.txt user.txt
+   10  ln ../src/stud.txt stud.txt
+   11  mv root root.txt
+   12  cd ../
+   13  ln -s ./src/root.txt root.txt
+   14  ln -s ./src/user.txt user.txt
+   15  ln -s ./src/stud.txt stud.txt
+   16  ls 
+   17  ls -al
+   18  cd dst/
+   19  ls -al
+   20  cd ../
+   21  tar -czvf anastasiya.tar.gz src/
+   22  mkdir backup
+   23  tar -xzvf anastasiya.tar.gz -C backup
+   24  cd backup/
+   25  ls
+   26  cd ../
+   27  find . -name *.txt
+   28  find . *.txt
+   29  find . -name "*.txt"
+   30  cd src/
+   31  rm user.txt 
+   32  cd ../
+   33  ls
+   34  cat user.txt 
+   35  rm -rf dst/
+   36  mv temp src/
+   37  rm -rf src/
+   38  history > anastasiya2.txt
