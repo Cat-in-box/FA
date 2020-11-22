@@ -1,5 +1,4 @@
-# Алгоритмы и структуры данных в языке Python
-
+# Практикум по программированию
 <img src="https://github.com/Cat-in-box/FA/blob/png/git%20pract_anim_python.png" align="right" width=400 height=389/>
 
 Пытаемся писать анимацию на Python
