@@ -5,7 +5,8 @@
 Анализ данных в Excel
 
 ## I семестр
-* [Практическая 1. Карманы и гистограммы](https://github.com/Cat-in-box/FA/blob/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/Lab%201.xlsx)
-* [Практическая 2. Выбросы](https://github.com/Cat-in-box/FA/blob/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/Lab%202%20%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.xlsx)
-* [Практическая 3. Комбинаторика](https://github.com/Cat-in-box/FA/blob/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/Lab%203%20%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D0%B8%D0%BA%D0%B0.xlsx)
-> [Контрольная 1. Теория вероятностей](https://github.com/Cat-in-box/FA/blob/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%201.xlsx)
+* [Практическая 1. Карманы и гистограммы](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%201)
+* [Практическая 2. Выбросы](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%202)
+* [Практическая 3. Комбинаторика](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%203)
+> [Контрольная 1. Теория вероятностей](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%201)
+* [Практическая 4. Теория вероятностей. Подготовка к контрольной 2](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%204)
