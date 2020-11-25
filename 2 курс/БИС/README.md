@@ -1,6 +1,6 @@
 # Банковские информационные системы
 
-<img src="https://github.com/Cat-in-box/FA/blob/png/git%20bisnew.png" align="right" width=400 height=547/>
+<img src="https://github.com/Cat-in-box/FA/blob/png/git%20bis.png" align="right" width=400 height=547/>
 
 Финансовые функции и банковские операции в Excel.
 Работа в Diasoft FA#
