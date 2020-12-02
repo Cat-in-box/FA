@@ -1,46 +1,47 @@
 #ТА САМАЯ ПРОГРАММА С ИНТЕРФЕЙСОМ
 # Калькулятор дробей
 
-Results = {}
+Results = {} # Тут будем сохранять результаты вычислений
 Result = 0
 
-def PUSK():
+def PUSK(): # Обработка сохранения, просмотра, удаления результатов, вывода с плавающей точкой и выхода по командам save, del, to double, exit
     global Result, Results
     inp = input('Ввод ')
     
-    if 'save' in inp:
+    if 'save' in inp: # Сохраняем результат
         Results[inp[inp.index(' ')+1:]]=Result
         print('save success')
         PUSK()
-    elif 'del' in inp:
+    elif 'del' in inp: # Удаляем результат
         Results.pop(inp[inp.index(' ')+1:])
         print('delete success')
         PUSK()
-    elif inp in Results.keys():
+    elif inp in Results.keys(): # Если уже считали такое выражение и сохраняли, то возьмем значение оттуда
         Result=Results[inp]
-        if Result[0]<Result[2]:
+        if Result[0]<Result[2]: # Обрабатываем дробный результат, если дробь правильная - выводим
             print(str(Result[0]) + '/' + str(Result[2]))
-        elif Result[0]>Result[2]:
+        elif Result[0]>Result[2]: # Если дробь неправильная - выделяем целую часть
             print(str(Result[0]//Result[2]) + '(' + str(Result[0]%Result[2]) + '/' + str(Result[2]) + ')')
-        else:
+        else: #Если числитель и знаменатель равны, то это 1
             print(1)
         PUSK()
-    elif inp=='to double':
+    elif inp=='to double': # Просто выводим бесконечную десятичную дробь
         print(Result[0]/Result[2])
         PUSK()
-    elif inp=='exit':
+    elif inp=='exit': # Выход
         None
     else:
+        # Собственно сама основная рекурсия
+
+        inp = inp.replace(' ', '') # Убираем пробелы
         
-        inp = inp.replace(' ', '')
-        
-        for key in Results.keys():
+        for key in Results.keys(): # Если есть результат какой-то части выражения в сохраненных, заменяем им
             inp = inp.replace(key, str(Results[key][0]) + '/' + str(Results[key][2]))
         
         inp = list(inp)
         
         i = 0
-        while i<(len(inp)): #Соединение цифр в многозначных числах
+        while i<(len(inp)): #Соединение цифр в многозначных числах, так как при переходе в list они разделились
             try:
                 inp[i] = int(inp[i])
                 inp[i+1] = int(inp[i+1])
@@ -95,6 +96,7 @@ def PUSK():
             elif (len(A)==3) and (len(B)==3):
                 return [A[0]*B[0], '/', A[2]*B[2]]
 
+        #Список чисел, которые являются простыми (делятся только на себя и 1)
         primitives = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499)
 
         def DivRecursion(A, B): #Поиск делителей
@@ -108,7 +110,7 @@ def PUSK():
             DivRecursion(A, B)
             return [A[0], '/', B[0]]
 
-        def F(X):
+        def F(X): # Рекурсивно разделяем список на 2 списка по приоритету действий и считаем через прописанные функции выше
             if ('+' in X) and ((('(' not in X) and (')' not in X)) or (X.index('(')>X.index('+')) or (X.index(')')<X.index('+'))):
                 A = X[0:X.index('+')]
                 B = X[X.index('+')+1:]
@@ -127,14 +129,15 @@ def PUSK():
             else:
                 return X
         
-        Result = F(inp)
-        Result = Div([Result[0]], [Result[2]])
+        Result = F(inp) # Начала всей этой рекурсионной штуки :D
+        Result = Div([Result[0]], [Result[2]]) # Если возможно, сокращаем результат
         
+        # Еще одна обработка вывода неправильных дробей, как в интерфейсе
         if Result[0]<Result[2]:
             print(str(Result[0]) + '/' + str(Result[2]))
         elif Result[0]>Result[2]:
             print(str(Result[0]//Result[2]) + '(' + str(Result[0]%Result[2]) + '/' + str(Result[2]) + ')')
         else:
             print(1)
-        PUSK()
-PUSK()
+        PUSK() # Снова возвращаемся к интерфейсу
+PUSK() # Старт всей программы
