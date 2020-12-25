@@ -115,6 +115,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603185527913" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605603444400">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605603444400" />
     <state width="770" height="160" key="GridCell.Tab.0.bottom" timestamp="1603187976722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -131,5 +135,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="770" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603187976722" />
+    <state x="209" y="32" key="new project wizard" timestamp="1605603492441">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1605603492441" />
   </component>
 </project>
