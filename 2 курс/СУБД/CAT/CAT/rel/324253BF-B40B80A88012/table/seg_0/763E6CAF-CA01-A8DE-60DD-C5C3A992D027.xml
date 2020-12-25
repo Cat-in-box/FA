@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="763E6CAF-CA01-A8DE-60DD-C5C3A992D027" name="Поезд">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>1DC8369F-8A97-9E6C-E376-41EC6E11C92D</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Номер_поезда" id="BD7198F1-3FA3-C37E-E370-A320BABC256C">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>F9262D37-85F3-1896-3C54-A3E8A0AB5BE9</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Тип" id="D8C32915-9BC0-4759-C3F3-1695D69C3C0D">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>D30E4201-E4AB-7671-39AD-4483FAB766F8</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Год_выпуска" id="B2B06C99-AEBB-87B4-1A82-19DABB5E71C0">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>DCB5FF3D-00EB-081F-B552-8A1F99725F15</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Количество_мест" id="F61BFACD-E0BD-19E0-BE73-71909AC9E3C6">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>97C753D1-0139-A21D-AB3B-D9E93EF4B0EA</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Техосмотр" id="74924ED3-6B11-AC4A-654E-8B641B911BF2">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>97944AE7-29BE-D1FD-088E-5E319DD6621C</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="994F3E21-DD6F-A0AA-3298-B6B1569F30D2" name="Поезд_PK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>D1415FD0-D624-69E6-72DD-74C718253CF5</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD7198F1-3FA3-C37E-E370-A320BABC256C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

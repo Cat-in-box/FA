@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1DC8369F-8A97-9E6C-E376-41EC6E11C92D" name="Поезд">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Номер поезда" id="F9262D37-85F3-1896-3C54-A3E8A0AB5BE9">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Тип" id="D30E4201-E4AB-7671-39AD-4483FAB766F8">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Год выпуска" id="DCB5FF3D-00EB-081F-B552-8A1F99725F15">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Количество мест" id="97C753D1-0139-A21D-AB3B-D9E93EF4B0EA">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Техосмотр" id="97944AE7-29BE-D1FD-088E-5E319DD6621C">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D1415FD0-D624-69E6-72DD-74C718253CF5" name="Поезд PK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 12:46:52 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F9262D37-85F3-1896-3C54-A3E8A0AB5BE9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

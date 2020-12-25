@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2C002BA5-18B6-1CF6-AC47-644FB6B49A91" containerWithKeyObject="67C1DB99-46E5-8810-C10C-41A2537D05A7" localFKIndex="491D2C5D-8154-3083-D8C2-F6CE02FA6276" name="Билет_Расписание_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>7291C89C-4877-4D83-3AA1-387E422BE0A2</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<referredTableLongName>Расписание</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EA87C7A7-8CAB-26B1-71D2-3B6677081218</referredTableID>
+<keyObject>07894A89-AA1A-DF03-A975-CFB54EAC7DE8</keyObject>
+<referredKeyID>07894A89-AA1A-DF03-A975-CFB54EAC7DE8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

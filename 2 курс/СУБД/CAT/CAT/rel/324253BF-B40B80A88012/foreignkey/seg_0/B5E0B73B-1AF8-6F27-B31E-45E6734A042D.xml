@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B5E0B73B-1AF8-6F27-B31E-45E6734A042D" containerWithKeyObject="11EC8362-03ED-5DD9-D8F3-7FC29C8BBA1B" localFKIndex="0E7E90FB-10FB-A5AF-C4CF-D216F500D2B4" name="Персонал_Зарплата_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>C26040E4-1E74-22F2-8EE0-C921541C1180</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<referredTableLongName>Зарплата</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C0DDD5E4-7FB8-9572-98A1-B368EB4C761B</referredTableID>
+<keyObject>541A4044-39E3-38B2-1F00-7041F5FDAA76</keyObject>
+<referredKeyID>541A4044-39E3-38B2-1F00-7041F5FDAA76</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Должность</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

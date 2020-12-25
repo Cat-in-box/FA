@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA59F4DF-C04C-EA44-B760-080DC584BDF3" name="Расписание">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:37:22 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="3B43D0D1-C8D2-70F0-C911-75AAE2DAA126">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-13 13:41:43 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Номер рейса" id="3B58E978-A319-E306-90D3-9396F2C67FDF">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:37:50 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Вокзал" id="2849B28E-A0C2-429E-54EF-F1C00F95E598">
+<createdBy>191758</createdBy>
+<createdTime>2020-11-12 08:09:31 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Дата" id="F77D7B78-FCFE-E1A7-2446-F3B10EFA5C29">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:38:03 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Время" id="5DE83F8E-1C4A-C598-35A5-0A77B58241AB">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:38:21 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Поезд" id="2F67896B-9519-92B6-F55A-66669FF825B2">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:38:37 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Путь" id="45B016C8-CBBE-F64A-0AD8-7F4DF1B3F104">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:39:00 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Номер рейса1" id="F1888404-0E55-EEB0-6C65-4AC5457490DF">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:53:39 UTC</createdTime>
+<generatorID>7523DAE1-EE87-D93B-190A-44448ABC51F2</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<referedAttribute>D8B2FA16-2963-FF70-19F0-14C39567AAB4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Номер поезда" id="E94137C8-AE83-0DB4-E651-84C03FB67546">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 08:53:49 UTC</createdTime>
+<generatorID>B8014E27-01D1-7F67-56F2-A32497959A9F</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<referedAttribute>F9262D37-85F3-1896-3C54-A3E8A0AB5BE9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="28440785-682F-F75C-8B05-AB5C48CE86EC" name="Рейс PK">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:37:47 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3B43D0D1-C8D2-70F0-C911-75AAE2DAA126</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80189D56-2D34-3641-38F9-81C56F296A44" name="Станция">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>648E97D0-71F9-CBDE-DC4E-5A4E79EF7F88</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Название" id="F6FC54F4-8466-A133-CC6E-E655AEF34A15">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>C328C9EB-DC05-E34A-5835-248C2A1A2550</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Следующая_станция" id="CE451D8C-FD64-A295-905C-7F6790B3090F">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>1A04B6CB-75E7-209E-08B4-C049F01C74E1</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Станция_Название" id="968F9CFE-FC78-144C-CDDF-9CACCC60DB31">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>8B314DD5-2D69-B197-FDE4-77FFF0B9E314</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7DF1248-3941-C27F-C2E4-0686FBC32041" referredColumn="F6FC54F4-8466-A133-CC6E-E655AEF34A15"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5F4BB95-8E30-8169-452A-BF8A51977075" name="Станция_PK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>752431E2-8701-71C4-F035-E064A670A674</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6FC54F4-8466-A133-CC6E-E655AEF34A15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="036CFA62-808A-5B2C-72AE-E9E1BFF14511" name="Станция_Станция_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>282483C6-2848-5DD4-EBEA-A1DCDD7E5C3C</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="968F9CFE-FC78-144C-CDDF-9CACCC60DB31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

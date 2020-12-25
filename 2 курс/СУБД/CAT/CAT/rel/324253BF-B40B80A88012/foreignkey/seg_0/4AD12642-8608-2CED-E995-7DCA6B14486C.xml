@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4AD12642-8608-2CED-E995-7DCA6B14486C" containerWithKeyObject="67C1DB99-46E5-8810-C10C-41A2537D05A7" localFKIndex="5155DA93-9484-9018-9BF8-AF789FBE5CF6" name="Билет_Персонал_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>B540A326-3338-7F53-159F-70148CC51245</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<referredTableLongName>Персонал</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>11EC8362-03ED-5DD9-D8F3-7FC29C8BBA1B</referredTableID>
+<keyObject>D0CF79A7-E492-C1A4-640E-265F2A863B29</keyObject>
+<referredKeyID>D0CF79A7-E492-C1A4-640E-265F2A863B29</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Номер_удостоверения</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

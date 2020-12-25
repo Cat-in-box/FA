@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B5C54D7E-16C0-7F75-9B06-719328D01F24" name="Зарплата">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:48:02 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Должность" id="3C0C4543-F7B9-8BC7-3C81-870E62E4BD15">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:48:08 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Зарплата" id="92BE1B9D-8733-08A5-E20B-D87C3EBCE60F">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:48:26 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3ABF6745-3AA7-A71C-919E-8E47672A1B5A" name="Зарплата PK">
+<createdBy>georgiydemo</createdBy>
+<createdTime>2020-11-09 14:48:23 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<engineerTo>
+<item key="324253BF-429B-0AEF-5E0E-B40B80A88012" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3C0C4543-F7B9-8BC7-3C81-870E62E4BD15</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

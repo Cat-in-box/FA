@@ -1,0 +1,235 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67C1DB99-46E5-8810-C10C-41A2537D05A7" name="Билет">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>08BF7089-51E1-BA8D-444F-1BBF82D1064E</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Цена" id="64FBBEDE-E76C-E03E-DAED-3513FD9051A0">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>7486CA9C-0394-9901-264C-5010B4E10CD1</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Вагон" id="608D9E3F-5E1C-7FA1-0006-EB69500480F1">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>256FE643-EC1E-5638-25AD-EED6B35D095B</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Место" id="CA516FB9-3BB0-56D7-6B51-CF5C1BDD2144">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>1797EB30-DD06-82BB-5274-913C430D688F</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Станция_отправления" id="6F1243C4-38E6-E9CB-56D1-13FE786D151F">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>EB6A4E98-4202-9E89-FAF4-682044E4EEE5</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Станция_назначения" id="AB81D3E3-0FE3-713E-9992-50F616F193FD">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>8B4792C9-8406-322D-7F2C-8369AEAE54ED</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Клиент_Номер_паспорта" id="CDFD9071-7359-0A97-B84A-81AE9092B747">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>DC40983E-2BE9-9D22-75AC-CFF6AF46C73F</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF3A5B93-B0E3-AF30-409C-3197EE830DA7" referredColumn="A08B1572-6865-4377-416F-0038E33EA024"/>
+</associations>
+</Column>
+<Column name="Персонал_Номер_удостоверения" id="171CAB87-4B3F-3BCE-5862-5099DA66D86C">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>E7FF54BE-3D14-BFD4-C98B-0EE07A6FE433</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4AD12642-8608-2CED-E995-7DCA6B14486C" referredColumn="4F693ECB-F796-B689-426B-92698514F3AE"/>
+</associations>
+</Column>
+<Column name="Расписание_ID" id="7BBE66A9-BE9D-015B-887A-6C0B119BC3B7">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>8C88E6AC-FE5D-7DED-6010-549B936982C2</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C002BA5-18B6-1CF6-AC47-644FB6B49A91" referredColumn="A441F4D7-6D3E-C3FA-A6A4-472A1EE6860A"/>
+</associations>
+</Column>
+<Column name="Станция_Название" id="5B0AC529-B96C-3D5C-3AD7-97486442525D">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>829AF97B-E323-1D48-ACC8-33CE09A5EDEE</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="388CC591-ABA2-A829-3E67-AAC22513E124" referredColumn="F6FC54F4-8466-A133-CC6E-E655AEF34A15"/>
+</associations>
+</Column>
+<Column name="Станция_Название1" id="AA578409-E540-57BA-A3B9-25A4883F7EC7">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>90A5B5B1-5445-ACC9-8B19-B3E57F8D820A</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37B428DB-F1B3-B495-5394-0BA34377E659" referredColumn="F6FC54F4-8466-A133-CC6E-E655AEF34A15"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2DDB7603-1D18-1008-D12F-C4075286BBD3" name="Билет_PK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>1E270569-073A-DCB2-8A12-30D5323CCEF2</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BBE66A9-BE9D-015B-887A-6C0B119BC3B7"/>
+<colUsage columnID="CDFD9071-7359-0A97-B84A-81AE9092B747"/>
+<colUsage columnID="171CAB87-4B3F-3BCE-5862-5099DA66D86C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A918B0EC-B571-9A38-139B-6493CEFDDC26" name="Билет__IDX">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>2BEF6216-1A5D-BBE1-0715-C2F2BE9CB09B</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="5B0AC529-B96C-3D5C-3AD7-97486442525D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E4344F4-49CC-2D77-7176-2EC22FCBAB99" name="Билет__IDXv1">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>B99C2BA7-0E18-7B1B-5653-619E8F976670</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="AA578409-E540-57BA-A3B9-25A4883F7EC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="491D2C5D-8154-3083-D8C2-F6CE02FA6276" name="Билет_Расписание_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>7291C89C-4877-4D83-3AA1-387E422BE0A2</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BBE66A9-BE9D-015B-887A-6C0B119BC3B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5155DA93-9484-9018-9BF8-AF789FBE5CF6" name="Билет_Персонал_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>B540A326-3338-7F53-159F-70148CC51245</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="171CAB87-4B3F-3BCE-5862-5099DA66D86C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="148A2D0D-3C2B-FAAC-4F72-0756C806D2C5" name="Билет_Станция_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>2BEF6216-1A5D-BBE1-0715-C2F2BE9CB09B</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B0AC529-B96C-3D5C-3AD7-97486442525D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D96847B1-E985-E6D4-F78C-FF4F24548646" name="Билет_Клиент_FK">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>F257AFAE-D313-D89F-1612-A02E6052D194</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDFD9071-7359-0A97-B84A-81AE9092B747"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8449B000-51A8-D0C3-3DE8-383A96E56373" name="Билет_Станция_FKv2">
+<createdBy>anast</createdBy>
+<createdTime>2020-12-24 11:14:08 UTC</createdTime>
+<generatorID>B99C2BA7-0E18-7B1B-5653-619E8F976670</generatorID>
+<ownerDesignName>CAT</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA578409-E540-57BA-A3B9-25A4883F7EC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
