@@ -58,13 +58,13 @@ def PUSK(): # Обработка сохранения, просмотра, уд�
             elif inp[i]=='-':
                 inp[i] = '+'
                 inp[i+1] = -inp[i+1]
-        
-        for i in range(len(inp)-5): #Перевод смешанных чисел в неправильные дроби
+
+        i = 0
+        while i < len(inp)-5: #Перевод смешанных чисел в неправильные дроби
             if (type(inp[i])==int) and (inp[i+1]=='(') and (type(inp[i+2])==int) and (inp[i+3]=='/') and (type(inp[i+4])==int) and (inp[i+5]==')'):
                 inp[i+2]+=inp[i]*inp[i+4]
                 inp.pop(i)
-                inp.pop(i)
-                inp.pop(i+3)
+            i += 1
 
         def brackets(X): #Работа со скобками
             X.remove('(')
@@ -108,7 +108,15 @@ def PUSK(): # Обработка сохранения, просмотра, уд�
 
         def Div(A, B): #Деление
             DivRecursion(A, B)
-            return [A[0], '/', B[0]]
+            if len(A) == 3:
+                if len(B) == 3:
+                    return [A[0]*B[2], '/', A[2]*B[0]]
+                else:
+                    return [A[0], '/', A[2]*B[0]]
+            elif len(B) == 3:
+                return [A[0]*B[2], '/', B[0]]
+            else:
+                return [A[0], '/', B[0]]
 
         def F(X): # Рекурсивно разделяем список на 2 списка по приоритету действий и считаем через прописанные функции выше
             if ('+' in X) and ((('(' not in X) and (')' not in X)) or (X.index('(')>X.index('+')) or (X.index(')')<X.index('+'))):
@@ -119,10 +127,16 @@ def PUSK(): # Обработка сохранения, просмотра, уд�
                 A = X[0:X.index('*')]
                 B = X[X.index('*')+1:]
                 return (Mult(F(A), F(B)))
-            elif ('/' in X) and ((('(' not in X) and (')' not in X)) or (X.index('(')>X.index('/')) or (X.index(')')<X.index('/'))):
-                A = X[0:X.index('/')]
-                B = X[X.index('/')+1:]
-                return (Div(F(A), F(B)))
+            elif ('/' in X) and ('(' in X) and (')' in X) and (not ((X.count('(') == 1) and (X.count(')') == 1) and (X.index('(') == 0) and (X.index(')') == len(X)-1))):
+                for i in range(len(X)):
+                    if (X[i] == '/') and (X[:i].count('(') == X[:i].count(')')):
+                        A = X[0:i]
+                        B = X[i+1:]
+                        if A[1] == B[1] and A[3] == B[3]:
+                            return ([1])
+                        else:
+                            return (Div(F(A), F(B)))
+                
             elif ('(' in X) and (')' in X):
                 brackets(X)
                 return(F(X))
@@ -130,10 +144,13 @@ def PUSK(): # Обработка сохранения, просмотра, уд�
                 return X
         
         Result = F(inp) # Начала всей этой рекурсионной штуки :D
-        Result = Div([Result[0]], [Result[2]]) # Если возможно, сокращаем результат
-        
+        if len(Result) > 1:
+            Result = Div([Result[0]], [Result[2]]) # Если возможно, сокращаем результат
+
         # Еще одна обработка вывода неправильных дробей, как в интерфейсе
-        if Result[0]<Result[2]:
+        if len(Result) == 1:
+            print(Result[0])
+        elif Result[0]<Result[2]:
             print(str(Result[0]) + '/' + str(Result[2]))
         elif Result[0]>Result[2]:
             print(str(Result[0]//Result[2]) + '(' + str(Result[0]%Result[2]) + '/' + str(Result[2]) + ')')
