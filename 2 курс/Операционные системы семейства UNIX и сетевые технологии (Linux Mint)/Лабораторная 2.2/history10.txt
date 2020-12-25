@@ -1,0 +1,210 @@
+    1  touch empty.sh
+    2  nano empty.sh 
+    3  chmod +x empty.sh 
+    4  mkdir bin
+    5  ls
+    6  mv empty.sh bin/
+    7  echo $PATH | anastasiya
+    8  echo $PATH | grep anastasiya
+    9  echo $PATH
+   10  export PATH="$HOME/bin:$PATH"
+   11  empty.sh
+   12  cd bin/
+   13  nano empty.sh 
+   14  empty.sh
+   15  cd ../
+   16  empty.sh
+   17  cd bin/
+   18  nano empty.sh 
+   19  ./empty.sh 
+   20  nano empty.sh 
+   21  ./empty.sh 
+   22  nano empty.sh 
+   23  ./empty.sh 
+   24  nano empty.sh 
+   25  cd ../
+   26  empty.sh
+   27  nano empty.sh 
+   28  cd bin/
+   29  nano empty.sh 
+   30  cd ../
+   31  empty.sh
+   32  mkdir tmp
+   33  empty.sh
+   34  ls
+   35  cd tmp/
+   36  ls
+   37  cd ../
+   38  nano bin/empty.sh 
+   39  cd 
+   40  ls
+   41  empty.sh
+   42  cat tmp/2020-11-19.txt 
+   43  nano bin/empty.sh 
+   44  empty.sh
+   45  ls 
+   46  cd bin/
+   47  ls
+   48  cd ../
+   49  cd tmp/
+   50  ls
+   51  rm *
+   52  ls
+   53  cd ../
+   54  */10 * * * * empty.sh
+   55  */10 * * * * /home/anastasiya/bin/empty.sh
+   56  crontab -l
+   57  crontab */10 * * * * empty.sh
+   58  crontab -e
+   59  crontab -l
+   60  cd tmp/
+   61  ls
+   62  crontab -e
+   63  ls
+   64  crontab -e
+   65  ls
+   66  cd ../bin/ && pwd
+   67  crontab -e
+   68  cd ../tmp/
+   69  ls
+   70  sudo service cron reload
+   71  ls
+   72  crontab -e
+   73  sudo service cron reload
+   74  ls
+   75  ls 
+   76  cd ../bin/
+   77  ls
+   78  touch remove.sh
+   79  chmod +x remove.sh 
+   80  nano remove.sh 
+   81  cat empty.sh 
+   82  nano remove.sh 
+   83  pwd
+   84  $HOME
+   85  cd $HOME
+   86  ls
+   87  crontab -e
+   88  ls 
+   89  sudo service cron reload
+   90  ls 
+   91  cd tmp/
+   92  ls
+   93  cd ../
+   94  cd bin/
+   95  ls
+   96  cat remove.sh 
+   97  nano remove.sh 
+   98 cd ../
+   99  sudo service cron reload
+  100  ls
+  101  cd tmp/
+  102  ls
+  103  l
+  104  ls
+  105  sudo service cron reload
+  106  crontab -e
+  107  sudo service cron reload
+  108  ls
+  109  cd ../
+  110  ls
+  111  cat tmp/
+  112  ls
+  113  cd tmp/
+  114  ls
+  115  cd ../
+  116  cd bin/
+  117  ls
+  118  cat remove.sh 
+  119  cd ../
+  120  find $HOME/tmp -type f -mmin 17 -exec rm -rf {} \;
+  121  ls
+  122  pwd
+  123  cat bin/remove.sh 
+  124  nano bin/remove.sh 
+  125  cat remove.sh 
+  126  sudo service cron reload
+  127  l
+  128  cd 
+  129  ls
+  130  cd tmp/
+  131  ls
+  132  cd ../
+  133  find $HOME/tmp/ -type f -mmin 17 -exec rm -rf {} \;
+  134  find $HOME/tmp/ --type f -mmin 17 -exec rm -rf {} \;
+  135  find $HOME/tmp/ -mmin 17 -exec rm -rf {} \;
+  136  cd tmp/
+  137  ls
+  138  find $HOME/tmp/ -mmin 1 -exec rm -rf {} \;
+  139  ls
+  140  find $HOME/tmp/ -mmin 1 --exec rm -rf {} \;
+  141  ls
+  142  cd
+  143  ls
+  144  cd bin/
+  145  nano remove.sh 
+  146  ls
+  147  find $HOME/tmp/. -mmin 17 -exec rm -rf {} \;
+  148  cd 
+  149  cd tmp/
+  150  ls
+  151  find $HOME/tmp/. -mmin 1 -exec rm -rf {} \;
+  152  ls
+  153  find $HOME/tmp/. -mmin 1
+  154  find $HOME/tmp/ -mmin 1
+  155  find $HOME/tmp/ 0-mmin 1
+  156  find $HOME/tmp/ --mmin 10
+  157  find $HOME/tmp/ -mmin 10
+  158  find $HOME/tmp/
+  159  find $HOME/tmp/ -mmin 10
+  160  find $HOME/tmp/ -mmin 1
+  161  find $HOME/tmp/ -type f -name '*.txt' -mmin 1
+  162  find $HOME/tmp/ -type f -name '*.txt' -mmin 100
+  163  find $HOME/tmp/ -type f -name '*.txt' -mmin -1
+  164  find $HOME/tmp/ -type f -name '*.txt' -mmin -10
+  165  find $HOME/tmp/ -type f -name '*.txt' -mmin -17
+  166  ls
+  167* 
+  168* 
+  169  find $HOME/tmp/ -mmin -60 -type f -exec
+  170  find $HOME/tmp/ -mmin -60 -type f
+  171  find $HOME/tmp/ -mmin -17 -type f
+  172  find $HOME/tmp/ -mmin -20 -type f
+  173  find $HOME/tmp/ -mmin -10 -type f
+  174  cat ../bin/empty.sh 
+  175  cat ../bin/remove.sh 
+  176  find $HOME/tmp/ -mmin -10 -type f
+  177  find $HOME/tmp/ -mmin -10 -type f -exec rm -f {}
+  178  find $HOME/tmp/ -mmin -10 -type f -exec rm -f {}\;
+  179  find $HOME/tmp/ -mmin -10 -type f -exec rm -rf {}
+  180  find $HOME/tmp/. -mmin -17 -type f -exec rm -rf {} \;
+  181  ls
+  182  find $HOME/tmp/. -mmin -1 -type f -exec rm -rf {} \;
+  183  ls
+  184  ls 
+  185  cd ../
+  186  ls
+  187  cd bin/
+  188  nano remove.sh 
+  189  ls 
+  190  sudo service cron reload
+  191  ls 
+  192  cd ../
+  193  ls
+  194  cd tmp/
+  195  ls
+  196  rm *
+  197  ls
+  198  ls 
+  199  cd ../
+  200  ls
+  201  crontab -e
+  202  ls
+  203  sudo service cron reload
+  204  cd tmp/
+  205  ls
+  206  cat 12-14-01.txt 
+  207  cd ../
+  208  ls
+  209  cd results/second/
+  210  history > history10.txt

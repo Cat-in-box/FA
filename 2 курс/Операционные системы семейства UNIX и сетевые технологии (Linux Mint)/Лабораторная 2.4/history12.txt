@@ -1,0 +1,23 @@
+    1  echo "" > .bash_history 
+    2  history
+    3  ps -aux
+    4  ps -aux > ps.out
+    5  sort ps.out 
+    6  cat ps.out 
+    7  sort ps.out > sorted.out
+    8  sort ps.out > sorted.ps
+    9  rm sorted.out 
+   10  cat sorted.ps | grep root > root.ps
+   11  cat sorted.ps | grep $(whoami) > user.ps
+   12  sed -e "s/root/<li> root/g" root.ps > root.html
+   13  sed -e "s/$/<li> $/g" user.ps > user.html
+   14  echo "<p><b>Итого процессов: $(cat root.html | wc -l) </b></p>" > root.total
+   15  echo "<p><b>Итого процессов: $(cat user.html | wc -l) </b></p>" > user.total
+   16  noshade='<hr noshade>'
+   17  body='<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><title>Статистика процессов</title></head><body><header><nav class="navbar navbar-light bg-light"><div class="container"><h1><a style="font-size:1.3rem" class="navbar-brand">Распределение процессов по пользователям</a></h1></div></nav></header><div class="container"><div class="row"><div class="col-12">'
+   18  footer='</div></div></div></body></html>'
+   19  echo $body > index.html
+   20  echo $(cat index.html) $noshade $(cat root.total) "Пользователь root" $noshade $(cat root.html) $noshade $(cat user.total) "Пользователь" $(whoami) $noshade $(cat user.html) $footer > index.html
+   21  ls
+   22  ls 
+   23  history > history12
