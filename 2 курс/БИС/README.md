@@ -18,7 +18,8 @@ ____
 * [Занятие 9. Опять откуда-то вклады в Excel](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%209)
 * [Занятие 10-11. Скоринговая модель](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2010-11)
 * [Занятие 12. Начало работы в Deductor](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012)
-
+  * [Занятие 12-1. Преобразования](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012)
+  * [Занятие 12-2. Вычисляемые поля](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012)
 * [Занятие 13. Кредитрный договор](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2013)
 * [Занятие 14. Депозиты](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2014)
 * [Занятие 15. Ссудные операции](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%91%D0%98%D0%A1/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2015)
