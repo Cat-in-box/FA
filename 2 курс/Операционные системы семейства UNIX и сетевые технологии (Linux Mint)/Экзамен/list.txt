@@ -1,0 +1,3 @@
+file1.tar.bz2
+file2.7z
+file3.zip
