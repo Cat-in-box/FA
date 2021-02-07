@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F0ECE817-19A5-248A-158A-6470A44C8DF4" name="Operations list">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:35:16 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="BC0D6A05-D783-DC21-B293-AF9347128256">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:55:28 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="CC5EA472-7513-F42A-D97B-64325900F1CA">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:55:29 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Note" id="19E4DA71-571D-8CF1-5635-6DD1F5A080E7">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:55:29 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A69BCCE3-6CA6-9E22-A277-3911A2C238DC" name="Operations list PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:55:54 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BC0D6A05-D783-DC21-B293-AF9347128256</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

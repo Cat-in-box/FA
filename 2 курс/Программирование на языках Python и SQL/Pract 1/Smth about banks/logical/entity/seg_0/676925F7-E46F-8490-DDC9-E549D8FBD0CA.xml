@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="676925F7-E46F-8490-DDC9-E549D8FBD0CA" name="Organizations">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:57:13 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="7FBD047B-5C44-722A-510A-B20529266728">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:01:50 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="8BBF2E01-EF80-0CB1-CD49-5BD18597497F">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:01:50 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Owner" id="F68BEFA5-4246-B143-3FBE-5BFAE13DFB21">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:01:50 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Registration certificate" id="AE0B8E03-EA98-FCAD-D765-9D60FC0E18C8">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:02:19 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Phone number" id="DE619D83-42EB-162E-FD56-73D5429F3938">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:01:50 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Address" id="18CEB9F0-1595-EB89-B582-90C36382772F">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:01:51 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A20AAAE0-1CA6-DB8A-8F83-08E391C5EA93" name="Organizations PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:03:24 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7FBD047B-5C44-722A-510A-B20529266728</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

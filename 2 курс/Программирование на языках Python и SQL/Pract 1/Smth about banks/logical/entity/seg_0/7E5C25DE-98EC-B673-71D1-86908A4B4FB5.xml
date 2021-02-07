@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E5C25DE-98EC-B673-71D1-86908A4B4FB5" name="Departments">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:34:13 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="67E3B34C-DDDE-0B54-15E1-10B9307FB306">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:00:21 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Department head" id="8CB7FFC9-451E-302C-C3DD-DADB659B4050">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:00:21 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="City" id="443D58B8-4735-1CF8-6CD3-4A9390CCA1C4">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:00:21 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="33E279BF-B4BB-FFAE-25A2-6ABC13586A85">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:08:05 UTC</createdTime>
+<generatorID>B7182402-96D9-C212-C670-7E4D234392FE</generatorID>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<referedAttribute>01E811AD-9843-A249-263E-154506DAF273</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9B512DBF-6506-8B06-F3C9-3C4843D437E1" name="Branches PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:00:25 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>67E3B34C-DDDE-0B54-15E1-10B9307FB306</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

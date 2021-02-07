@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_7" directorySegmentName="seg_0" id="878CB347-EA90-7FA1-5902-1C692C6E3B1A">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:04:02 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<sourcePk>CC6C1347-201D-CD69-2338-C4EAC5AB82DA</sourcePk>
+<targetPk>9B512DBF-6506-8B06-F3C9-3C4843D437E1</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>14AE2632-2175-7765-CD18-583FDE16A8D4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7E5C25DE-98EC-B673-71D1-86908A4B4FB5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC75E8D9-1851-8C34-98D4-BFF47A42D4FF" name="Account transactions">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:34:07 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E81C13FB-4E8A-FB1C-92AC-4A417BF580B7">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:50:54 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Account ID" id="422EAD9A-7E30-FDD0-6703-AAF95C57AA2D">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:50:54 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Operation ID" id="8BF0F854-5CF2-4C9B-2062-193B399CEEF7">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:50:55 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Recipient ID" id="F7FFFB56-3B13-B136-DAF6-D00BDD1562B2">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:52:18 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Amount of money" id="A3D50EEA-73B0-3C5F-273B-4694E8E59866">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:52:18 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Served by" id="88D34BC5-E550-775D-C246-B9C7BACB0081">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:37:30 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="FC8B7D29-F1F0-A25A-122D-E42E171D2D2D">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:05:11 UTC</createdTime>
+<generatorID>A2F1E892-0C90-37A2-20B8-39FD5092805A</generatorID>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<referedAttribute>BC0D6A05-D783-DC21-B293-AF9347128256</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID4" id="A7DA4F80-37CA-871F-4181-B0735DF1D129">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:06:38 UTC</createdTime>
+<generatorID>435774B1-1231-D3C7-FF0A-A8E277C28701</generatorID>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>48F952C7-BE55-8195-8A84-D1FE213D6122</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID3" id="651CBDDD-0FD6-8727-9144-F64485CD9A1B">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 10:32:00 UTC</createdTime>
+<generatorID>0429DDD2-038C-D065-B39C-1D86CF87A5D3</generatorID>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<referedAttribute>210AE7B2-5E8F-1233-FC01-798532CF9C3C</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="BF3D84EC-D30C-601A-E8EE-E285222C582D">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 11:35:28 UTC</createdTime>
+<generatorID>4606AC74-F117-F4FC-8BA9-F8E5111F9FAD</generatorID>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<referedAttribute>D0341CA1-E4E8-725A-4962-79DEC6FCD197</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="45A767E9-1294-A938-69DB-C64569AC5936" name="Account transactions PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-02-05 09:54:25 UTC</createdTime>
+<ownerDesignName>Smth about banks</ownerDesignName>
+<engineerTo>
+<item key="2DBC4DCB-277A-E925-E9A8-4B14A61B04FB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E81C13FB-4E8A-FB1C-92AC-4A417BF580B7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
