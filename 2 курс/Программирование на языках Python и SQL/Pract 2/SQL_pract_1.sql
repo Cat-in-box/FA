@@ -69,5 +69,6 @@ WHERE (STIPEND < 100 OR NOT (BIRTHDAY >= ‘10/03/1980’ AND STUDENT_ID > 1003)
 -- 12. Какие данные будут получены в результате выполнения запроса?
 SELECT *
 FROM STUDENT
-WHERE NOT ((BIRTHDAY = ‘10/03/1980’OR STIPEND > 100)
-AND STUDENT_ID >= 1003);
+WHERE NOT ((BIRTHDAY = ‘10/03/1980’ OR STIPEND > 100) AND STUDENT_ID >= 1003);
+-- Все строки таблицы, так как STUDENT_ID > 1003 всегда будет False, =>
+-- AND всегда False, ее отрицание - всегда True
