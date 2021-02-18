@@ -6,7 +6,6 @@ public class Main {
         StringBuilderWr NewSB = new StringBuilderWr();
         NewSB.setChangeListener(new Listener());
         NewSB.append("Meow");
-        NewSB.append("! ");
         NewSB.append("Purrr");
     }
 }
