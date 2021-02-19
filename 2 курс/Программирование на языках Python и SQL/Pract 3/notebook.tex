@@ -1,0 +1,1545 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{T01\_Core}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    
+
+    5 февраля 2021 года Семинар ПИ19-3, ПИ19-4 - 3 подгруппа ПИ19-4, ПИ19-5
+- 4 подгруппа
+
+6 февраля 2021 года Семинар ПИ19-2, ПИ19-3, ПИ19-4 - 2 подгруппа
+
+    \section{Тема 1. SQLAlchemy и язык выражений
+SQL}\label{ux442ux435ux43cux430-1.-sqlalchemy-ux438-ux44fux437ux44bux43a-ux432ux44bux440ux430ux436ux435ux43dux438ux439-sql}
+
+SQL Expression Language
+
+    \section{Введение}\label{ux432ux432ux435ux434ux435ux43dux438ux435}
+
+    \subsection{SQLAlchemy и язык выражений
+SQL}\label{sqlalchemy-ux438-ux44fux437ux44bux43a-ux432ux44bux440ux430ux436ux435ux43dux438ux439-sql}
+
+SQLAlchemy - библиотека Пайтон, которая устраняет разрыв между
+реляционными базами данных и традиционным программированием. Хотя
+SQLAlchemy позволяет «опуститься» до необработанного SQL для выполнения
+запросов, она поощряет мышление более высокого уровня за счет более
+«питонического» и дружественного подхода к запросам и обновлению базы
+данных. SQLAlchemy используется для взаимодействия с широким спектром
+баз данных. Она позволяет создавать модели данных и запросы в манере,
+напоминающей обычные классы и операторы Python.
+
+Язык выражений SQL (SQL Expression Language), называемый также Кор
+(Core, ядро) - это инструмент SQLAlchemy для представления общих
+операторов и выражений SQL в стиде Пайтон. Он ориентирован на
+фактическую схему базы данных и стандартизирован таким образом, что
+обеспечивает единообразный язык для большого числа серверных баз данных.
+
+SQLAlchemy Core имеет представление, ориентированное на схему, таблицы,
+ключи и индексы, как и традиционный SQL. SQLAlchemy Core эффективен в
+отчетах, анализе и других применениях, где полезно иметь возможность
+жестко контролировать запрос или работать с немоделированными данными.
+Надежный пул соединений с базой данных и оптимизация набора результатов
+идеально подходят для работы с большими объемами данных.
+
+    \subsection{Кодирование}\label{ux43aux43eux434ux438ux440ux43eux432ux430ux43dux438ux435}
+
+Работать с SQLAlchemy удобно в интерактивной среде "чтение-оценка-вывод"
+(read-evaluate-print-loop REPL), в такой, как интерактивный ноутбук
+ipython http://ipython.org/
+
+Установка Юпитер Ноутбук
+https://jupyter.readthedocs.io/en/latest/install/notebook-classic.html
+
+Для освоения и работы с ноутбуком iPython, рекомендуется пакет программ
+Анаконда (Anaconda).
+
+https://www.anaconda.com/products/individual
+
+Анаконда содержит Пайтон, Юпитер ноутбук и другие часто используемые
+приложения для научных вычислений и обработки данных.
+
+Порядок установки и запуска интерктивной среды Юпитер ноутбук
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Загрузить Анаконда
+\item
+  Установить Анаконда
+\item
+  Запустить Юпитер ноутбук. Для этого использовать команду меню, либо
+  консольную команду
+
+  =\textgreater{} jupyter notebook
+\end{enumerate}
+
+    \subsection{Установка
+SQLAlchemy}\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-sqlalchemy}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c+c1}{\PYZsh{} ! pip install sqlalchemy}
+\end{Verbatim}
+
+
+    \subsection{Установка драйверов баз
+данных}\label{ux443ux441ux442ux430ux43dux43eux432ux43aux430-ux434ux440ux430ux439ux432ux435ux440ux43eux432-ux431ux430ux437-ux434ux430ux43dux43dux44bux445}
+
+По \textbf{\emph{умолчанию}} SQLAlchemy поддерживает SQLite3 без
+дополнительных драйверов. Для подключения к другим базам данных
+необходимы дополнительные драйверы баз данных.
+
+\begin{itemize}
+\tightlist
+\item
+  PostgreSQL. Установка драйвера Psycopg2: http://initd.org/psycopg/
+\item
+  MySQL (требуется версия MySQL 4.1 и выше)
+\item
+  Другие
+\end{itemize}
+
+SQLAlchemy также можно использовать вместе с Drizzle, Firebird, Oracle,
+Sybase и Microsoft SQL Server. Сообщество также предоставило внешние
+диалекты для многих других баз данных, таких как IBM DB2, Informix,
+Amazon Redshift, EXASolution, SAP SQL Anywhere, Monet и многих других.
+Создание диалектов поддерживается SQLAlchemy.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} PostgreSQL}
+        \PY{c+c1}{\PYZsh{} ! pip install psycopg2}
+        
+        \PY{c+c1}{\PYZsh{} MySQL}
+        \PY{c+c1}{\PYZsh{} ! pip  install  pymysql}
+\end{Verbatim}
+
+
+    \subsection{Соединение с базой
+данных}\label{ux441ux43eux435ux434ux438ux43dux435ux43dux438ux435-ux441-ux431ux430ux437ux43eux439-ux434ux430ux43dux43dux44bux445}
+
+Чтобы подключиться к базе данных, нужно создать механизм (движок)
+SQLAlchemy. Механизм SQLAlchemy создает общий интерфейс с базой данных
+для выполнения операторов SQL.
+
+SQLAlchemy предоставляет функцию для создания механизма с учетом
+\emph{строки подключения} и, возможно, некоторых дополнительных
+именованных (keywords) аргументов. Строка подключения может содержать:
+
+\begin{itemize}
+\tightlist
+\item
+  Тип базы данных (Postgres, MySQL, etc.);
+\item
+  Диалект, если он отличается от установленного по умолчанию для
+  конкретного типа базы данных (Psycopg2, PyMySQL и т. д.);
+\item
+  Дополнительные данные аутентификации (имя пользователя и пароль);
+\item
+  Расположение базы данных (файл или имя хоста сервера базы данных);
+\item
+  Дополнительный порт сервера базы данных;
+\item
+  Необязательное имя базы данных.
+\end{itemize}
+
+Строка подключения позволяют нам использовать конкретный файл или место
+хранения. В примере 1 определяется файл базы данных SQLite с именем
+listings.db: - хранящийся в текущем каталоге; - в памяти; - с указанием
+полного пути к файлу (Unix и Windows).
+
+В Windows строка подключения будет иметь вид engine4;
+\textbackslash{}~требуются для экранирования символа "слэш".
+
+Функция create\_engine возвращает экземпляр механизма SQLAlchemy.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c+c1}{\PYZsh{} 0\PYZhy{}1. Создание механизма SQLAlchemy со строкой подключения SQLite}
+        
+        \PY{k+kn}{import} \PY{n+nn}{sqlalchemy}
+        \PY{k+kn}{from} \PY{n+nn}{sqlalchemy} \PY{k}{import} \PY{n}{create\PYZus{}engine}
+        
+        \PY{n}{engine} \PY{o}{=} \PY{n}{create\PYZus{}engine}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sqlite:///listings.db}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} engine2 = create\PYZus{}engine(\PYZsq{}sqlite:///:memory:\PYZsq{})}
+        \PY{c+c1}{\PYZsh{} engine3 = create\PYZus{}engine(\PYZsq{}sqlite:////home/Airbnb/listings.db\PYZsq{})}
+        \PY{c+c1}{\PYZsh{} engine4 = create\PYZus{}engine(\PYZsq{}sqlite:///c:\PYZbs{}\PYZbs{}Users\PYZbs{}\PYZbs{}Airbnb\PYZbs{}\PYZbs{}listings.db\PYZsq{})}
+\end{Verbatim}
+
+
+    PostgreSQLПример 2. Cоздание механизма для локальной базы данных
+PostgreSQL с именем mydb
+
+\texttt{from\ sqlalchemy\ import\ create\_engine\ engine=create\_engine(\textquotesingle{}postgresql+psycopg2://username:password@localhost:5432/mydb\textquotesingle{})}
+
+    MySQL. Пример 3. Создание механизма для удаленной БД MySQL
+
+\texttt{from\ sqlalchemy\ import\ create\_engine\ engine\ =\ create\_engine(\textquotesingle{}mysql+pymysql://username:password\textquotesingle{}\textquotesingle{}@mysql01.mikhail.internal/listings\textquotesingle{},\ pool\_recycle=3600)}
+
+    Теперь, когда создан экземпляр механизма соединения с базой данных, мы
+можем начать использовать SQLAlchemy Core чтобы связать наше приложение
+с сервисами базы данных.
+
+    \section{1.1. Схема и типы
+данных}\label{ux441ux445ux435ux43cux430-ux438-ux442ux438ux43fux44b-ux434ux430ux43dux43dux44bux445}
+
+    В процессе выполнения кода примеров этой темы нам понадобятся библиотеки
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{from} \PY{n+nn}{datetime} \PY{k}{import} \PY{n}{datetime}
+        \PY{k+kn}{from} \PY{n+nn}{sqlalchemy} \PY{k}{import} \PY{p}{(}\PY{n}{MetaData}\PY{p}{,} \PY{n}{Table}\PY{p}{,} \PY{n}{Column}\PY{p}{,} \PY{n}{Integer}\PY{p}{,} \PY{n}{Numeric}\PY{p}{,} \PY{n}{String}\PY{p}{,} \PY{n}{DateTime}\PY{p}{,} 
+                                \PY{n}{Boolean}\PY{p}{,} \PY{n}{ForeignKey}\PY{p}{,} \PY{n}{create\PYZus{}engine}\PY{p}{,} \PY{n}{PrimaryKeyConstraint}\PY{p}{,} 
+                                \PY{n}{UniqueConstraint}\PY{p}{,} \PY{n}{CheckConstraint}\PY{p}{,} \PY{n}{Index}\PY{p}{,} \PY{n}{insert}\PY{p}{,} \PY{n}{BigInteger}\PY{p}{)}
+\end{Verbatim}
+
+
+    В SQLAlchemy имеется четыре категории типов данных: - Универсальный -
+Стандартный SQL - Зависящий от поставщика - Определяется пользователем
+
+Универсальная категория типов данных предназначена для сопоставления
+типов данных в Python и SQL.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{BigInteger,int,BIGINT}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Boolean,bool,BOOLEAN or SMALLINT}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date,datetime.date,DATE (SQLite: STRING)}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DateTime,datetime.datetime,DATETIME (SQLite: STRING)}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Enum,str,ENUM or VARCHAR}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Float,float or Decimal,FLOAT or REAL}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Integer,int,INTEGER}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interval,datetime.timedelta,INTERVAL or DATE from epoch}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{LargeBinary,byte,BLOB or BYTEA}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Numeric,decimal.Decimal,NUMERIC or DECIMAL}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Unicode,unicode,UNICODE or VARCHAR}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Text,str,CLOB or TEXT}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                      \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time,datetime.time,DATETIME}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+                      \PY{n}{columns}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{SQLAlchemy,Python,SQL}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}5}]:}      SQLAlchemy              Python                          SQL
+        0    BigInteger                 int                       BIGINT
+        1       Boolean                bool          BOOLEAN or SMALLINT
+        2          Date       datetime.date        DATE (SQLite: STRING)
+        3      DateTime   datetime.datetime    DATETIME (SQLite: STRING)
+        4          Enum                 str              ENUM or VARCHAR
+        5         Float    float or Decimal                FLOAT or REAL
+        6       Integer                 int                      INTEGER
+        7      Interval  datetime.timedelta  INTERVAL or DATE from epoch
+        8   LargeBinary                byte                BLOB or BYTEA
+        9       Numeric     decimal.Decimal           NUMERIC or DECIMAL
+        10      Unicode             unicode           UNICODE or VARCHAR
+        11         Text                 str                 CLOB or TEXT
+        12         Time       datetime.time                     DATETIME
+\end{Verbatim}
+            
+    Стандартные типы (например CHAR и NVARCHAR) используются в случаях,
+когда универсальные типы не отвечают требованиям из-за конкретной
+структуры данных.
+
+Типы, зависящие от поставщика. Пример: поле JSON в PostgreSQL.
+
+fromsqlalchemy.dialects.postgresqlimport JSON
+
+    \subsection{Метаданные}\label{ux43cux435ux442ux430ux434ux430ux43dux43dux44bux435}
+
+Метаданные используются для связывания структуры базы данных. Метаданные
+полезно рассматривать как каталог объектов таблиц с дополнительной
+информацией о механизме и соединении. Метаданные необходимо
+импортировать и инициализировать. Инициализируем экземпляр объектов
+MetaData:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}1}
+        
+        \PY{k+kn}{from} \PY{n+nn}{sqlalchemy} \PY{k}{import} \PY{n}{MetaData}
+        \PY{n}{metadata} \PY{o}{=} \PY{n}{MetaData}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \subsection{Таблицы}\label{ux442ux430ux431ux43bux438ux446ux44b}
+
+Объекты таблиц инициализируются в SQLAlchemy Core путем вызова
+конструктора Table с именем таблицы и метаданными, аргументы считаются
+объектами столбцов. Столбцы создаются путем вызова Column с именем,
+типом и затем аргументами, которые представляют дополнительные
+конструкции и ограничения SQL. В примере 1-2 создадим таблицу, которая
+может использоваться для перечня объектов размещения гостиничного
+бизнеса airbnb: http://insideairbnb.com/get-the-data.html
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}2}
+        
+        \PY{n}{listing}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}\PY{p}{,}\PY{n}{index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{255}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{300}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Numeric}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{CheckConstraint}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price \PYZgt{}= 0.00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}price\PYZus{}positive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                       \PY{n}{extend\PYZus{}existing}\PY{o}{=}\PY{k+kc}{True}
+                      \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{En}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+                    \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ru}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{идентификатор объекта размещения}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{имя объекта размещения}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{адрес веб\PYZhy{}страницы}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{идентификатор владельца}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{идентификатор местоположения}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{оборудование, удобства}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{тип собственности}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{тип помещения}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{число спален}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{число кроватей}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{цена}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{\PYZcb{}}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:}                   En                                Ru
+        0         listing\_id  идентификатор объекта размещения
+        1       listing\_name            имя объекта размещения
+        2        listing\_url                адрес веб-страницы
+        3            host\_id           идентификатор владельца
+        4   neighbourhood\_id      идентификатор местоположения
+        5          amenities            оборудование, удобства
+        6   property\_type\_id                 тип собственности
+        7       room\_type\_id                     тип помещения
+        8           bedrooms                      число спален
+        9               beds                    число кроватей
+        10             price                              цена
+\end{Verbatim}
+            
+    \subsubsection{Дополнительные
+аргументы}\label{ux434ux43eux43fux43eux43bux43dux438ux442ux435ux43bux44cux43dux44bux435-ux430ux440ux433ux443ux43cux435ux43dux442ux44b}
+
+Рассмотрим использование дополнительных аргументов nullable, unique,
+onupdate
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}3}
+        
+        \PY{n}{user}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{user}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{user\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{user\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{15}\PY{p}{)}\PY{p}{,}\PY{n}{nullable}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,}\PY{n}{unique}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{email\PYZus{}address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{255}\PY{p}{)}\PY{p}{,}\PY{n}{nullable}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{phone}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{,}\PY{n}{nullable}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{password}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{25}\PY{p}{)}\PY{p}{,}\PY{n}{nullable}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{created\PYZus{}on}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{DateTime}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{default}\PY{o}{=}\PY{n}{datetime}\PY{o}{.}\PY{n}{now}\PY{p}{)}\PY{p}{,}
+                    \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{updated\PYZus{}on}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{DateTime}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{default}\PY{o}{=}\PY{n}{datetime}\PY{o}{.}\PY{n}{now}\PY{p}{,}\PY{n}{onupdate}\PY{o}{=}\PY{n}{datetime}\PY{o}{.}\PY{n}{now}\PY{p}{)}
+                   \PY{p}{)}
+\end{Verbatim}
+
+
+    \subsubsection{Ключи и
+ограничения}\label{ux43aux43bux44eux447ux438-ux438-ux43eux433ux440ux430ux43dux438ux447ux435ux43dux438ux44f}
+
+Ключи и ограничения задают с помощью объектов PrimaryKeyConstraint,
+UniqueConstraint, CheckConstraint
+
+    \paragraph{Первичный
+ключ}\label{ux43fux435ux440ux432ux438ux447ux43dux44bux439-ux43aux43bux44eux447}
+
+В примерах 1-2 и 1-3 столбцы \texttt{listing\_id} и \texttt{user\_id}
+объявлялись первичными ключами с помощью ключевого слова primary\_key.
+Также, можно определить составной первичный ключ, присвоив параметру
+primary\_key значение True для нескольких столбцов. Таким образом, ключ
+рассматривается как кортеж, в котором столбцы, помеченные как ключ,
+присутствуют в порядке, в котором они были определены в таблице.
+Первичные ключи также могут быть определены после столбцов в
+конструкторе таблицы, как показано в следующем фрагменте.
+
+\texttt{user=Table(\textquotesingle{}user\textquotesingle{},metadata,\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}user\_name\textquotesingle{},String(15),nullable=False,unique=True),\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}email\_address\textquotesingle{},String(255),nullable=False),\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}phone\textquotesingle{},String(20),nullable=False),\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}password\textquotesingle{},String(25),nullable=False),\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}created\_on\textquotesingle{},DateTime(),default=datetime.now),\ \ \ \ \ \ \ \ \ \ \ \ \ Column(\textquotesingle{}updated\_on\textquotesingle{},DateTime(),default=datetime.now,onupdate=datetime.now),\ \ \ \ \ \ \ \ \ \ \ \ \ PrimaryKeyConstraint(\textquotesingle{}user\_id\textquotesingle{},\ name=\textquotesingle{}user\_pk\textquotesingle{}),\ \ \ \ \ \ \ \ \ \ \ \ \ extend\_existing=True\ \ \ \ \ \ \ \ \ \ \ \ )}
+
+    \paragraph{Уникальность}\label{ux443ux43dux438ux43aux430ux43bux44cux43dux43eux441ux442ux44c}
+
+Другое распространенное ограничение - ограничение уникальности, которое
+используется, чтобы гарантировать, что в данном поле значения не
+повторяются.
+
+UniqueConstraint('user\_name', name='uix\_username')
+
+    \paragraph{Проверка
+значения}\label{ux43fux440ux43eux432ux435ux440ux43aux430-ux437ux43dux430ux447ux435ux43dux438ux44f}
+
+Этот тип ограничения используется, чтобы гарантировать, что данные,
+предоставленные для столбца, соответствуют набору критериев,
+определенных пользователем. В следующем фрагменте кода мы гарантируем,
+что price не может быть меньше 0,00:
+
+CheckConstraint('price \textgreater{}= 0.00',
+name='listing\_price\_positive')
+
+    \subsubsection{Индексы}\label{ux438ux43dux434ux435ux43aux441ux44b}
+
+В примере 1-2 создан индекс для столбца listing\_name. Когда индексы
+создаются, как показано в этом примере, они получают имена
+ix\_listings\_listing\_name. Мы также можем определить индекс, используя
+явный тип конструкции. Можно обозначить несколько столбцов, разделив их
+запятой. Можно добавить аргумент ключевого слова unique = True, чтобы
+индекс был уникальным. При явном создании индексов они передаются в
+конструктор таблиц после столбцов. Чтобы имитировать указанный индекс
+явным способом, в конструктор Table требуется добавить
+Index('ix\_listings\_listing\_name', 'listing\_name')
+
+    Мы также можем создавать функциональные индексы для ситуаций, когда
+часто требуется запрос на основе нескольких полей БД. Например, если мы
+хотим искать по параметрам оборудования ("удобства") и цены в качестве
+объединенного элемента, можно определить функциональный индекс для
+оптимизации поиска:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{Index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ix\PYZus{}am\PYZus{}price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{listing}\PY{o}{.}\PY{n}{c}\PY{o}{.}\PY{n}{amenities}\PY{p}{,} \PY{n}{listing}\PY{o}{.}\PY{n}{c}\PY{o}{.}\PY{n}{price}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}10}]:} Index('ix\_am\_price', Column('amenities', String(length=300), table=<listing>), Column('price', Numeric(precision=7, scale=2), table=<listing>))
+\end{Verbatim}
+            
+    \subsubsection{Связи и внешние
+ключи}\label{ux441ux432ux44fux437ux438-ux438-ux432ux43dux435ux448ux43dux438ux435-ux43aux43bux44eux447ux438}
+
+Тепрь, когда имеются пользователи и объекты размещения, необходимо
+обеспечить связи, позволяющие пользователям бронировать те или иные
+объекты. Рассмотрим схему данных.
+
+    
+
+    Создадим таблицы для заказов \texttt{order}, \texttt{line\_item},
+таблицу местоположений \texttt{neighbourhood}, таблицы типов
+собственности и комнат \texttt{property\_type}, \texttt{room\_type}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}4}
+         
+         \PY{n}{order} \PY{o}{=} \PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{metadata}\PY{p}{,}
+                        \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                        \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{user\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ForeignKey}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{user.user\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                        \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{confirmed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{Boolean}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{default}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{p}{,}
+                        \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order\PYZus{}price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                        \PY{n}{extend\PYZus{}existing}\PY{o}{=}\PY{k+kc}{True}
+                       \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}5}
+         
+         \PY{n}{line\PYZus{}item} \PY{o}{=} \PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{line\PYZus{}item}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{metadata}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{line\PYZus{}item\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ForeignKey}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{order.order\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ForeignKey}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing.listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{item\PYZus{}start\PYZus{}date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{DateTime}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{item\PYZus{}end\PYZus{}date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{DateTime}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{item\PYZus{}price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{extend\PYZus{}existing}\PY{o}{=}\PY{k+kc}{True}
+                           \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}6}
+         
+         \PY{n}{neighbourhood}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                             \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                             \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}7}
+         
+         \PY{n}{property\PYZus{}type}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                             \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                             \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)}
+                            \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{c+c1}{\PYZsh{} 1\PYZhy{}8}
+         
+         \PY{n}{room\PYZus{}type}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                         \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                         \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)}
+                        \PY{p}{)}
+\end{Verbatim}
+
+
+    В примерах 1-4 и 1-5 внешние ключи задаются с помощью строки:
+'order.order\_id'. Также существует явный способ задания ограничений по
+внешнему ключу: ForeignKeyConstraint({[}'order\_id'{]},
+{[}'order.order\_id'{]})
+
+    \subsection{Сохранение
+таблиц}\label{ux441ux43eux445ux440ux430ux43dux435ux43dux438ux435-ux442ux430ux431ux43bux438ux446}
+
+Все таблицы и определения связаны с экземпляром метаданных. Сохранение
+схемы в базе данных осуществляется посредством вызова метода
+create\_all() в экземпляре метаданных с движком, в котором он должен
+создавать эти таблицы. По умолчанию create\_all не будет пытаться
+воссоздать таблицы, которые уже существуют в базе данных, и его можно
+запускать несколько раз. Движок (механизм) SQLAlchemy определен нами
+ранее в примере 0-1, экземпляр метаданных создан ранее в примере 1-1.
+Теперь осуществим вызов метода create\_all()
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{metadata}\PY{o}{.}\PY{n}{create\PYZus{}all}\PY{p}{(}\PY{n}{engine}\PY{p}{)}
+\end{Verbatim}
+
+
+    \subsection{Дополнительно: DB Browser for
+SQLite}\label{ux434ux43eux43fux43eux43bux43dux438ux442ux435ux43bux44cux43dux43e-db-browser-for-sqlite}
+
+https://sqlitebrowser.org/
+
+    \subsubsection{Контрольная
+работа}\label{ux43aux43eux43dux442ux440ux43eux43bux44cux43dux430ux44f-ux440ux430ux431ux43eux442ux430}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Используя библиотеку SQLAlchemy и Юпитер Ноутбук создать реляционную
+  базу данных (до 5-6 таблиц), отражающих финансово-экономческую
+  деятельность отдела предприятия или решающих какую-либо задачу в
+  рамках работы отдела или предпрития.
+\item
+  Создать схему (нарисовать).
+\item
+  Написать аннтоцию, кратко о смысле деятельности, отраженной в
+  структуре данных.
+\item
+  Схему в pdf, png, jpeg и т. д. приложить к письму с результатом.
+\end{enumerate}
+
+Результат в формате Юпитер Ноутбук прислать на почту mvsmirnov@fa.ru.
+
+В теме письма указать подгруппу, Фимилию, ИО. В отдельной ячейке
+ноутбука указать подгруппу, Фимилию, ИО.
+
+    
+
+    19 февраля 2021 года Семинар ПИ19-3, ПИ19-4 - 3 подгруппа ПИ19-4, ПИ19-5
+- 4 подгруппа
+
+20 февраля 2021 года Семинар ПИ19-2, ПИ19-3, ПИ19-4 - 2 подгруппа
+
+    \section{1.2. Работа с
+данными}\label{ux440ux430ux431ux43eux442ux430-ux441-ux434ux430ux43dux43dux44bux43cux438}
+
+    Теперь, когда в нашей базе данных есть таблицы, приступим к работе с
+данными внутри этих таблиц. Мы рассмотрим, как вставлять, извлекать и
+удалять данные, а затем научимся сортировать, группировать и
+использовать связи в наших данных. Мы будем использовать язык
+SQLExpression Language (SEL), предоставляемый SQLAlchemy Core. Начнем с
+изучения того, как вставлять данные.
+
+    \subsection{Вставка
+данных}\label{ux432ux441ux442ux430ux432ux43aux430-ux434ux430ux43dux43dux44bux445}
+
+Вставим первую строку \texttt{ListingsAmsterdam.csv}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{am}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ListingsAmsterdam.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{;}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{am}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}17}]:}       id                         listing\_url  \textbackslash{}
+         0  20168  https://www.airbnb.com/rooms/20168   
+         1  27886  https://www.airbnb.com/rooms/27886   
+         2  28871  https://www.airbnb.com/rooms/28871   
+         3  29051  https://www.airbnb.com/rooms/29051   
+         4  31080  https://www.airbnb.com/rooms/31080   
+         
+                                                         name  host\_id  host\_name  \textbackslash{}
+         0       Studio with private bathroom in the centre 1    59484  Alexander   
+         1  Romantic, stylish B\&B houseboat in canal district    97647       Flip   
+         2                            Comfortable double room   124245      Edwin   
+         3                            Comfortable single room   124245      Edwin   
+         4                2-story apartment + rooftop terrace   133488     Nienke   
+         
+           host\_is\_superhost neighbourhood\_cleansed              property\_type  \textbackslash{}
+         0                 f           Centrum-Oost  Private room in townhouse   
+         1                 t           Centrum-West  Private room in houseboat   
+         2                 t           Centrum-Oost  Private room in apartment   
+         3                 t           Centrum-Oost  Private room in apartment   
+         4                 f                   Zuid           Entire apartment   
+         
+                  room\_type  bathrooms\_text  {\ldots}  first\_review  last\_review  \textbackslash{}
+         0     Private room  1 private bath  {\ldots}    2010-03-02   2020-04-09   
+         1     Private room       1.5 baths  {\ldots}    2012-01-09   2020-07-25   
+         2     Private room   1 shared bath  {\ldots}    2010-08-22   2020-09-20   
+         3     Private room   1 shared bath  {\ldots}    2011-03-16   2020-08-28   
+         4  Entire home/apt          1 bath  {\ldots}    2011-08-06   2017-10-16   
+         
+           review\_scores\_rating  review\_scores\_accuracy  review\_scores\_cleanliness  \textbackslash{}
+         0                   89                    10.0                       10.0   
+         1                   99                    10.0                       10.0   
+         2                   97                    10.0                       10.0   
+         3                   95                    10.0                       10.0   
+         4                   95                     9.0                       10.0   
+         
+           review\_scores\_checkin review\_scores\_communication  review\_scores\_location  \textbackslash{}
+         0                  10.0                        10.0                    10.0   
+         1                  10.0                        10.0                    10.0   
+         2                  10.0                        10.0                    10.0   
+         3                  10.0                        10.0                    10.0   
+         4                  10.0                        10.0                     9.0   
+         
+            review\_scores\_value  reviews\_per\_month  
+         0                  9.0               2.58  
+         1                 10.0               2.01  
+         2                 10.0               2.68  
+         3                  9.0               4.05  
+         4                  9.0               0.28  
+         
+         [5 rows x 25 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{am\PYZus{}neigh}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}cleansed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{am\PYZus{}neigh}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{am\PYZus{}neigh}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{am\PYZus{}neigh}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}18}]:}                                      index  neighbourhood\_cleansed
+         1                          Bijlmer-Centrum                       2
+         2                            Bos en Lommer                     394
+         3                   Buitenveldert - Zuidas                      69
+         4                             Centrum-Oost                     702
+         5                             Centrum-West                     941
+         6                   De Aker - Nieuw Sloten                      42
+         7                   De Baarsjes - Oud-West                    1321
+         8                  De Pijp - Rivierenbuurt                     906
+         9                  Geuzenveld - Slotermeer                      49
+         10                IJburg - Zeeburgereiland                     150
+         11                              Noord-Oost                      73
+         12                              Noord-West                     137
+         13  Oostelijk Havengebied - Indische Buurt                     137
+         14                                  Osdorp                      41
+         15                               Oud-Noord                     242
+         16                                Oud-Oost                     396
+         17                             Slotervaart                     149
+         18                         Watergraafsmeer                     153
+         19                              Westerpark                     526
+         20                                    Zuid                     522
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{am\PYZus{}prop}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{am\PYZus{}prop}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{am\PYZus{}prop}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{am\PYZus{}prop}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}19}]:}                                  index  property\_type
+         1                                 Boat             80
+         2                     Entire apartment           4248
+         3             Entire bed and breakfast              2
+         4                      Entire bungalow              1
+         5                   Entire condominium             95
+         6                       Entire cottage              2
+         7                         Entire floor              1
+         8                   Entire guest suite             13
+         9                    Entire guesthouse              6
+         10                        Entire house            404
+         11                         Entire loft            116
+         12                        Entire place              2
+         13           Entire serviced apartment             31
+         14                    Entire townhouse            190
+         15                        Entire villa              8
+         16                           Houseboat             76
+         17                          Lighthouse              1
+         18                        Private room              7
+         19           Private room in apartment            906
+         20   Private room in bed and breakfast            176
+         21                Private room in boat             34
+         22            Private room in bungalow              1
+         23               Private room in cabin              2
+         24         Private room in condominium             25
+         25               Private room in floor              1
+         26         Private room in guest suite             64
+         27          Private room in guesthouse              7
+         28              Private room in hostel              3
+         29               Private room in house            131
+         30           Private room in houseboat             50
+         31              Private room in island              2
+         32                Private room in loft             30
+         33  Private room in serviced apartment              3
+         34          Private room in tiny house              4
+         35           Private room in townhouse             82
+         36               Private room in villa              2
+         37                  Room in aparthotel              2
+         38           Room in bed and breakfast             35
+         39              Room in boutique hotel             37
+         40                      Room in hostel              2
+         41                       Room in hotel             27
+         42          Room in serviced apartment             23
+         43            Shared room in apartment             10
+         44    Shared room in bed and breakfast              1
+         45               Shared room in hostel              5
+         46                Shared room in house              1
+         47            Shared room in houseboat              2
+         48                          Tiny house              1
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{am\PYZus{}room}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{am}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{am\PYZus{}room}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{am\PYZus{}room}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{am\PYZus{}room}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}20}]:}              index  room\_type
+         1  Entire home/apt       5279
+         2       Hotel room         74
+         3     Private room       1580
+         4      Shared room         19
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}21}]:} id                                                                         20168
+         listing\_url                                   https://www.airbnb.com/rooms/20168
+         name                                Studio with private bathroom in the centre 1
+         host\_id                                                                    59484
+         host\_name                                                              Alexander
+         host\_is\_superhost                                                              f
+         neighbourhood\_cleansed                                              Centrum-Oost
+         property\_type                                          Private room in townhouse
+         room\_type                                                           Private room
+         bathrooms\_text                                                    1 private bath
+         bedrooms                                                                       1
+         beds                                                                           1
+         amenities                      ["Wifi", "Hot water", "Hangers", "Host greets {\ldots}
+         price                                                                        236
+         number\_of\_reviews                                                            339
+         first\_review                                                          2010-03-02
+         last\_review                                                           2020-04-09
+         review\_scores\_rating                                                          89
+         review\_scores\_accuracy                                                        10
+         review\_scores\_cleanliness                                                     10
+         review\_scores\_checkin                                                         10
+         review\_scores\_communication                                                   10
+         review\_scores\_location                                                        10
+         review\_scores\_value                                                            9
+         reviews\_per\_month                                                           2.58
+         Name: 0, dtype: object
+\end{Verbatim}
+            
+    Создадим оператор вставки, чтобы поместить объект размещения в таблицу.
+Для этого мы можем вызвать метод \texttt{insert()} для таблицы
+\texttt{listing}, а затем использовать оператор \texttt{values()} с
+аргументами для каждого столбца.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{c+c1}{\PYZsh{} 2\PYZhy{}1 Одиночная вставка как метод}
+         
+         \PY{n}{ins}\PY{o}{=}\PY{n}{listing}\PY{o}{.}\PY{n}{insert}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}
+             \PY{n}{listing\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{20168}\PY{p}{,}
+             \PY{n}{listing\PYZus{}name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Studio with private bathroom in the centre 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{n}{listing\PYZus{}url}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{https://www.airbnb.com/rooms/20168}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{n}{host\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{59484}\PY{p}{,}
+             \PY{n}{neighbourhood\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{4}\PY{p}{,}
+             \PY{n}{property\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{35}\PY{p}{,}
+             \PY{n}{room\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,}
+             \PY{n}{amenities}\PY{o}{=}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{300}\PY{p}{]}\PY{p}{,}
+             \PY{n}{bedrooms}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+             \PY{n}{beds}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+             \PY{n}{price}\PY{o}{=}\PY{l+m+mi}{236}
+         \PY{p}{)}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{ins}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+INSERT INTO listing (listing\_id, listing\_name, listing\_url, host\_id, neighbourhood\_id, amenities, property\_type\_id, room\_type\_id, bedrooms, beds, price) VALUES (:listing\_id, :listing\_name, :listing\_url, :host\_id, :neighbourhood\_id, :amenities, :property\_type\_id, :room\_type\_id, :bedrooms, :beds, :price)
+
+    \end{Verbatim}
+
+    \texttt{print(str(ins))} показывает нам фактический оператор SQL,
+который будет выполнен. Наши значения были заменены на:
+\texttt{column\_name} в этом операторе SQL, именно так SQLAlchemy
+представляет параметры, отображаемые с помощью функции \texttt{str()}.
+Параметры используются, чтобы гарантировать, что наши данные были
+правильно экранированы, что снижает проблемы безопасности, такие как
+атаки с использованием SQL-инъекций. По-прежнему можно получить
+параметры, посмотрев на скомпилированную версию оператора вставки,
+потому что каждая внутренняя часть базы данных может обрабатывать
+параметры по-разному (это контролируется диалектом).
+
+Метод \texttt{compile()} для объекта \texttt{ins} возвращает объект
+\texttt{SQLCompiler}, который дает нам доступ к фактическим параметрам,
+которые будут отправлены с запросом через атрибут params:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{ins}\PY{o}{.}\PY{n}{compile}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{params}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:} \{'listing\_id': 20168,
+          'listing\_name': 'Studio with private bathroom in the centre 1',
+          'listing\_url': 'https://www.airbnb.com/rooms/20168',
+          'host\_id': 59484,
+          'neighbourhood\_id': 4,
+          'amenities': '["Wifi", "Hot water", "Hangers", "Host greets you", "Long term stays allowed", "Carbon monoxide alarm", "Fire extinguisher", "Dedicated workspace", "Paid parking off premises", "Essentials", "Bed linens", "Hair dryer", "TV", "Heating", "Refrigerator", "Free street parking", "Smoke alarm"]',
+          'property\_type\_id': 35,
+          'room\_type\_id': 3,
+          'bedrooms': 1,
+          'beds': 1,
+          'price': 236\}
+\end{Verbatim}
+            
+    Теперь, когда у нас есть полное представление об операторе вставки и мы
+понимаем, что будет вставлено в таблицу, мы можем использовать метод
+\texttt{execute()}, чтобы отправить оператор в базу данных, которая
+вставит запись в таблицу.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{connection}\PY{o}{=}\PY{n}{engine}\PY{o}{.}\PY{n}{connect}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{result}\PY{o}{=}\PY{n}{connection}\PY{o}{.}\PY{n}{execute}\PY{p}{(}\PY{n}{ins}\PY{p}{)}
+\end{Verbatim}
+
+
+    Мы также можем получить идентификатор вставленной записи, обратившись к
+атрибуту \texttt{inserted\_primary\_key}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{result}\PY{o}{.}\PY{n}{inserted\PYZus{}primary\PYZus{}key}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}26}]:} [20168]
+\end{Verbatim}
+            
+    Обратите внимание, что значения \texttt{beds} и \texttt{bedrooms} в
+таблице \texttt{am} веществнного типа, в то время, как в базе данных эти
+поля целочисленного типа. В данном случае все работает корректно, так
+как параметрам \texttt{bedrooms} и\texttt{beds} значения присваиваются в
+явном виде, но если их получать из столбцов \texttt{bedrooms} и
+\texttt{beds} таблицы \texttt{df}, то в таблице \texttt{df} потребуется
+преобразование типов, его можно выполнить (с предварительной очисткой
+данных) так:
+
+\texttt{df{[}\textquotesingle{}bedrooms\textquotesingle{}{]}=df{[}\textquotesingle{}bedrooms\textquotesingle{}{]}.fillna(0)\ df{[}\textquotesingle{}bedrooms\textquotesingle{}{]}=pd.to\_numeric(df{[}\textquotesingle{}bedrooms\textquotesingle{}{]},\ downcast=\textquotesingle{}integer\textquotesingle{})\ df{[}\textquotesingle{}beds\textquotesingle{}{]}=df{[}\textquotesingle{}beds\textquotesingle{}{]}.fillna(0)\ df{[}\textquotesingle{}beds\textquotesingle{}{]}=pd.to\_numeric(df{[}\textquotesingle{}beds\textquotesingle{}{]},\ downcast=\textquotesingle{}integer\textquotesingle{})}
+
+    Метод \texttt{execute()} использует оператор \texttt{insert} и другие
+параметры для компиляции SQL-выражения с помощью компилятора
+соответствующего диалекта базы данных. Этот компилятор строит нормальное
+параметризованное выражение и возвращается в метод \texttt{execute},
+который отправляет оператор SQL в базу данных через соответствующее
+соединение. Затем сервер базы данных выполняет оператор и возвращает
+результат операции.
+
+    
+
+    В дополнение к вставке в качестве метода экземпляра объекта
+\texttt{Table}, \texttt{insert} также доступен как функция верхнего
+уровня для случаев, когда таблица изначально неизвестна. Например,
+компания airbnb дополнительно к объектам в Амстердаме может иметь еще
+одну таблицу для Лиона (Франция): \texttt{listing\_lyon}. Использование
+функции вставки позволяет использовать один оператор и подменять
+таблицы.
+
+\texttt{ins=insert(listing).values(\ \ \ \ \ listing\_id=20168,\ \ \ \ \ listing\_name=\textquotesingle{}Studio\ with\ private\ bathroom\ in\ the\ centre\ 1\textquotesingle{},\ \ \ \ \ listing\_url=\textquotesingle{}https://www.airbnb.com/rooms/20168\textquotesingle{},\ \ \ \ \ host\_id=59484,\ \ \ \ \ neighbourhood\_id=1,\ \ \ \ \ property\_type\_id=1,\ \ \ \ \ room\_type\_id=1,\ \ \ \ \ amenities=df.loc{[}0,\textquotesingle{}amenities\textquotesingle{}{]},\ \ \ \ \ bedrooms=1,\ \ \ \ \ beds=1,\ \ \ \ \ price=236\ )}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{lyon}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ListingsLyon.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{;}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{lyon}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}27}]:}       id                         listing\_url  \textbackslash{}
+         0  56766  https://www.airbnb.com/rooms/56766   
+         
+                                          name  host\_id host\_name host\_is\_superhost  \textbackslash{}
+         0  Amazing duplex-terrace in old Lyon   269557  Isabelle                 f   
+         
+           neighbourhood\_cleansed     property\_type        room\_type bathrooms\_text  \textbackslash{}
+         0      5e Arrondissement  Entire apartment  Entire home/apt        2 baths   
+         
+            {\ldots}  first\_review  last\_review review\_scores\_rating  \textbackslash{}
+         0  {\ldots}    2010-11-15   2018-09-04                   94   
+         
+            review\_scores\_accuracy  review\_scores\_cleanliness review\_scores\_checkin  \textbackslash{}
+         0                     9.0                        9.0                  10.0   
+         
+           review\_scores\_communication  review\_scores\_location  review\_scores\_value  \textbackslash{}
+         0                        10.0                    10.0                  9.0   
+         
+            reviews\_per\_month  
+         0               0.45  
+         
+         [1 rows x 25 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{lyon}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5089 entries, 0 to 5088
+Data columns (total 25 columns):
+ \#   Column                       Non-Null Count  Dtype  
+---  ------                       --------------  -----  
+ 0   id                           5089 non-null   int64  
+ 1   listing\_url                  5089 non-null   object 
+ 2   name                         5087 non-null   object 
+ 3   host\_id                      5089 non-null   int64  
+ 4   host\_name                    5089 non-null   object 
+ 5   host\_is\_superhost            5089 non-null   object 
+ 6   neighbourhood\_cleansed       5089 non-null   object 
+ 7   property\_type                5089 non-null   object 
+ 8   room\_type                    5089 non-null   object 
+ 9   bathrooms\_text               5088 non-null   object 
+ 10  bedrooms                     4409 non-null   float64
+ 11  beds                         5078 non-null   float64
+ 12  amenities                    5089 non-null   object 
+ 13  price                        5089 non-null   float64
+ 14  number\_of\_reviews            5089 non-null   int64  
+ 15  first\_review                 5089 non-null   object 
+ 16  last\_review                  5089 non-null   object 
+ 17  review\_scores\_rating         5089 non-null   int64  
+ 18  review\_scores\_accuracy       5080 non-null   float64
+ 19  review\_scores\_cleanliness    5084 non-null   float64
+ 20  review\_scores\_checkin        5080 non-null   float64
+ 21  review\_scores\_communication  5083 non-null   float64
+ 22  review\_scores\_location       5080 non-null   float64
+ 23  review\_scores\_value          5080 non-null   float64
+ 24  reviews\_per\_month            5089 non-null   float64
+dtypes: float64(10), int64(4), object(11)
+memory usage: 994.1+ KB
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}29}]:} id                                                                         56766
+         listing\_url                                   https://www.airbnb.com/rooms/56766
+         name                                          Amazing duplex-terrace in old Lyon
+         host\_id                                                                   269557
+         host\_name                                                               Isabelle
+         host\_is\_superhost                                                              f
+         neighbourhood\_cleansed                                         5e Arrondissement
+         property\_type                                                   Entire apartment
+         room\_type                                                        Entire home/apt
+         bathrooms\_text                                                           2 baths
+         bedrooms                                                                       3
+         beds                                                                           4
+         amenities                      ["Shampoo", "Long term stays allowed", "Kitche{\ldots}
+         price                                                                        250
+         number\_of\_reviews                                                             55
+         first\_review                                                          2010-11-15
+         last\_review                                                           2018-09-04
+         review\_scores\_rating                                                          94
+         review\_scores\_accuracy                                                         9
+         review\_scores\_cleanliness                                                      9
+         review\_scores\_checkin                                                         10
+         review\_scores\_communication                                                   10
+         review\_scores\_location                                                        10
+         review\_scores\_value                                                            9
+         reviews\_per\_month                                                           0.45
+         Name: 0, dtype: object
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{lyon\PYZus{}neigh}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{lyon}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}cleansed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}neigh}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{lyon\PYZus{}neigh}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}neigh}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}30}]:}                 index  neighbourhood\_cleansed
+         1  1er Arrondissement                     886
+         2   2e Arrondissement                     596
+         3   3e Arrondissement                     859
+         4   4e Arrondissement                     412
+         5   5e Arrondissement                     445
+         6   6e Arrondissement                     475
+         7   7e Arrondissement                     861
+         8   8e Arrondissement                     309
+         9   9e Arrondissement                     246
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{lyon\PYZus{}prop}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{lyon}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}prop}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lyon\PYZus{}prop}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}prop}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}31}]:}                                  index  property\_type
+         1                     Entire apartment           3585
+         2                   Entire condominium            214
+         3                   Entire guest suite              4
+         4                    Entire guesthouse              3
+         5                         Entire house             37
+         6                          Entire loft            116
+         7                         Entire place              3
+         8            Entire serviced apartment             21
+         9                     Entire townhouse             20
+         10                        Entire villa              6
+         11                           Houseboat              1
+         12                        Private room              1
+         13           Private room in apartment            824
+         14   Private room in bed and breakfast             23
+         15                Private room in boat              5
+         16         Private room in condominium             87
+         17             Private room in cottage              1
+         18         Private room in guest suite              2
+         19          Private room in guesthouse              9
+         20              Private room in hostel              1
+         21               Private room in house             31
+         22           Private room in houseboat              6
+         23                Private room in loft             14
+         24  Private room in serviced apartment              1
+         25           Private room in townhouse             29
+         26               Private room in villa              1
+         27                  Room in aparthotel              2
+         28           Room in bed and breakfast              1
+         29              Room in boutique hotel              7
+         30                      Room in hostel              2
+         31                       Room in hotel              1
+         32          Room in serviced apartment              9
+         33            Shared room in apartment             14
+         34          Shared room in condominium              1
+         35               Shared room in hostel              1
+         36                 Shared room in loft              2
+         37                          Tiny house              4
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{lyon\PYZus{}room}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{lyon}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}room}\PY{o}{.}\PY{n}{index}\PY{o}{=}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lyon\PYZus{}room}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{lyon\PYZus{}room}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}32}]:}              index  room\_type
+         1  Entire home/apt       4015
+         2       Hotel room         17
+         3     Private room       1039
+         4      Shared room         18
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{listing\PYZus{}lyon}\PY{o}{=}\PY{n}{Table}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}lyon}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{metadata}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{primary\PYZus{}key}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}\PY{p}{,}\PY{n}{index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{255}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{String}\PY{p}{(}\PY{l+m+mi}{300}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Integer}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{Column}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{Numeric}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{CheckConstraint}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price \PYZgt{}= 0.00}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{lyon\PYZus{}price\PYZus{}positive}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                            \PY{n}{extend\PYZus{}existing}\PY{o}{=}\PY{k+kc}{True}
+                           \PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{metadata}\PY{o}{.}\PY{n}{create\PYZus{}all}\PY{p}{(}\PY{n}{engine}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{c+c1}{\PYZsh{}2\PYZhy{}3. Функция insert}
+         
+         \PY{n}{ins}\PY{o}{=}\PY{n}{insert}\PY{p}{(}\PY{n}{listing\PYZus{}lyon}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}
+             \PY{n}{listing\PYZus{}id}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{listing\PYZus{}name}\PY{o}{=}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+             \PY{n}{listing\PYZus{}url}\PY{o}{=}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+             \PY{n}{host\PYZus{}id}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{neighbourhood\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,}
+             \PY{n}{amenities}\PY{o}{=}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{300}\PY{p}{]}\PY{p}{,}
+             \PY{n}{property\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+             \PY{n}{room\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+             \PY{n}{bedrooms}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{beds}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{price}\PY{o}{=}\PY{n}{lyon}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{p}{)}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{ins}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{ins}\PY{o}{.}\PY{n}{compile}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{params}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+INSERT INTO listing\_lyon (listing\_id, listing\_name, listing\_url, host\_id, neighbourhood\_id, amenities, property\_type\_id, room\_type\_id, bedrooms, beds, price) VALUES (:listing\_id, :listing\_name, :listing\_url, :host\_id, :neighbourhood\_id, :amenities, :property\_type\_id, :room\_type\_id, :bedrooms, :beds, :price)
+\{'listing\_id': 56766, 'listing\_name': 'Amazing duplex-terrace in old Lyon', 'listing\_url': 'https://www.airbnb.com/rooms/56766', 'host\_id': 269557, 'neighbourhood\_id': 5, 'amenities': '["Shampoo", "Long term stays allowed", "Kitchen", "TV", "Crib", "Dedicated workspace", "Host greets you", "Dryer", "Paid parking off premises", "Wifi", "Carbon monoxide alarm", "Pack \textbackslash{}\textbackslash{}u2019n Play/travel crib", "Essentials", "Hair dryer", "Iron", "Luggage dropoff allowed", "Smoke alarm", "Washer", "H', 'property\_type\_id': 1, 'room\_type\_id': 1, 'bedrooms': 3, 'beds': 4, 'price': 250.0\}
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{result}\PY{o}{=}\PY{n}{connection}\PY{o}{.}\PY{n}{execute}\PY{p}{(}\PY{n}{ins}\PY{p}{)}
+         \PY{n}{result}\PY{o}{.}\PY{n}{inserted\PYZus{}primary\PYZus{}key}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}36}]:} [56766]
+\end{Verbatim}
+            
+    Метод \texttt{execute} объекта \texttt{connection} может принимать
+значения в качестве именованных аргументов, которые передаются после
+выражения. Когда выражение компилируется, он добавляет названия
+именованных аргументов в список столбцов, а каждое из их значений в
+часть ЗНАЧЕНИЯ оператора SQL.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}37}]:} \PY{c+c1}{\PYZsh{} района, тип собственности, тип комнаты для вставляемой записи}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}cleansed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+27886
+Centrum-West
+Private room in houseboat
+Private room
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{c+c1}{\PYZsh{} 2\PYZhy{}4}
+         
+         \PY{n}{ins} \PY{o}{=} \PY{n}{listing}\PY{o}{.}\PY{n}{insert}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{result} \PY{o}{=} \PY{n}{connection}\PY{o}{.}\PY{n}{execute}\PY{p}{(}
+             \PY{n}{ins}\PY{p}{,}
+             \PY{n}{listing\PYZus{}id}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{listing\PYZus{}name}\PY{o}{=}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+             \PY{n}{listing\PYZus{}url}\PY{o}{=}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+             \PY{n}{host\PYZus{}id}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{neighbourhood\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,}
+             \PY{n}{amenities}\PY{o}{=}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{300}\PY{p}{]}\PY{p}{,}
+             \PY{n}{property\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{30}\PY{p}{,}
+             \PY{n}{room\PYZus{}type\PYZus{}id}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,}
+             \PY{n}{bedrooms}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{beds}\PY{o}{=}\PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+             \PY{n}{price}\PY{o}{=}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{p}{)}
+         \PY{n}{result}\PY{o}{.}\PY{n}{inserted\PYZus{}primary\PYZus{}key}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}38}]:} [27886]
+\end{Verbatim}
+            
+    Хотя такой способ не часто используется на практике для одиночных
+вставок, он дает иллюстрацию компиляции и сборки оператора перед
+отправкой на сервер базы данных. Мы можем вставить сразу несколько
+записей, используя список словарей с данными. Воспользуемся этими
+знаниями, чтобы вставить еще две записи в таблицу listing (Пример 2-5).
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}39}]:} \PY{k}{for} \PY{n}{rec} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{column} \PY{o+ow}{in} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}cleansed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{:}
+                 \PY{n+nb}{print}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{rec}\PY{p}{,}\PY{n}{column}\PY{p}{]}\PY{p}{)}
+             \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+28871
+Centrum-Oost
+Private room in apartment
+Private room
+
+29051
+Centrum-Oost
+Private room in apartment
+Private room
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}40}]:} \PY{n}{listing\PYZus{}list}\PY{o}{=}\PY{p}{[}
+             \PY{p}{\PYZob{}}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}name}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{4}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{300}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}am}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{19}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{3}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+             \PY{p}{\PYZcb{}}\PY{p}{,}
+             \PY{p}{\PYZob{}}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}name}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{listing\PYZus{}url}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{host\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{neighbourhood\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{4}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{amenities}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{300}\PY{p}{]}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{property\PYZus{}type\PYZus{}am}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{19}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{room\PYZus{}type\PYZus{}id}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{l+m+mi}{3}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bedrooms}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n+nb}{int}\PY{p}{(}\PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{beds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{am}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{price}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+             \PY{p}{\PYZcb{}}
+         \PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}41}]:} \PY{n}{result}\PY{o}{=}\PY{n}{connection}\PY{o}{.}\PY{n}{execute}\PY{p}{(}\PY{n}{ins}\PY{p}{,}\PY{n}{listing\PYZus{}list}\PY{p}{)}
+\end{Verbatim}
+
+
+    Словари в списке должны иметь одинаковые ключи. SQLAlchemy компилирует
+выражение с первым словарем в списке и завершится ошибкой, если
+последующие словари будут другими.
+
+    \subsubsection{Запросы к
+данным}\label{ux437ux430ux43fux440ux43eux441ux44b-ux43a-ux434ux430ux43dux43dux44bux43c}
+
+Чтобы начать построение запроса, мы начнем с использования функции
+выбора, которая аналогична стандартному оператору SQL SELECT. Для начала
+выберем все записи в нашей таблице файлов listing.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}46}]:} \PY{k+kn}{from} \PY{n+nn}{sqlalchemy}\PY{n+nn}{.}\PY{n+nn}{sql} \PY{k}{import} \PY{n}{select}
+         \PY{n}{s} \PY{o}{=} \PY{n}{select}\PY{p}{(}\PY{p}{[}\PY{n}{listing}\PY{p}{]}\PY{p}{)}  
+         \PY{n}{rp} \PY{o}{=} \PY{n}{connection}\PY{o}{.}\PY{n}{execute}\PY{p}{(}\PY{n}{s}\PY{p}{)}
+         \PY{n}{results} \PY{o}{=} \PY{n}{rp}\PY{o}{.}\PY{n}{fetchall}\PY{p}{(}\PY{p}{)} 
+         \PY{n}{results}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}46}]:} [(20168, 'Studio with private bathroom in the centre 1', 'https://www.airbnb.com/rooms/20168', 59484, 4, '["Wifi", "Hot water", "Hangers", "Host greets you", "Long term stays allowed", "Carbon monoxide alarm", "Fire extinguisher", "Dedicated workspace", "Paid parking off premises", "Essentials", "Bed linens", "Hair dryer", "TV", "Heating", "Refrigerator", "Free street parking", "Smoke alarm"]', 35, 3, 1, 1, Decimal('236.00')),
+          (27886, 'Romantic, stylish B\&B houseboat in canal district', 'https://www.airbnb.com/rooms/27886', 97647, 5, '["Carbon monoxide alarm", "Private living room", "Refrigerator", "Dishes and silverware", "Smoke alarm", "Patio or balcony", "Private entrance", "TV" {\ldots} (2 characters truncated) {\ldots} "Wifi", "Smart lock", "Hot water", "Coffee maker", "Hangers", "Fire extinguisher", "Shampoo", "Luggage dropoff allowed", "Lake access", "Long term st', 30, 3, 1, 1, Decimal('135.00')),
+          (28871, 'Comfortable double room', 'https://www.airbnb.com/rooms/28871', 124245, 4, '["Wifi", "Hot water", "Private entrance", "Hangers", "Host greets you", "Lock on bedroom door", "Shampoo", "Carbon monoxide alarm", "Fire extinguisher", "Essentials", "Dryer", "Hair dryer", "Heating", "Refrigerator", "Smoke alarm"]', None, 3, 1, 1, Decimal('75.00')),
+          (29051, 'Comfortable single room', 'https://www.airbnb.com/rooms/29051', 124245, 4, '["Coffee maker", "Host greets you", "Hair dryer", "Shampoo", "Hangers", "Bed linens", "Heating", "Lock on bedroom door", "Wifi", "Shower gel", "Essentials", "Smoke alarm", "Fire extinguisher", "Iron", "Refrigerator", "Hot water", "Private entrance"]', None, 3, 1, 1, Decimal('55.00'))]
+\end{Verbatim}
+            
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
