@@ -12,7 +12,7 @@ Organizations = Table('Organizations', metadata,
                       Column('Name', String(255), nullable=False, unique=True),
                       Column('Owner', String(50), nullable=False),
                       Column('Registration_certificate', Integer(), nullable=False, unique=True),
-                      Column('Phone number', Integer(), nullable=False),
+                      Column('Phone_number', Integer(), nullable=False),
                       Column('Address', String(255), nullable=False),
                       extend_existing=True
                      )
