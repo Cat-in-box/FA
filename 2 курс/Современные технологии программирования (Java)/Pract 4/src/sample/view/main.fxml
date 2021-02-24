@@ -36,12 +36,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Label" />
-                        <Label text="Label" GridPane.rowIndex="1" />
-                        <Label text="Label" GridPane.rowIndex="2" />
-                        <Label text="Label" GridPane.rowIndex="3" />
-                        <Label text="Label" GridPane.rowIndex="4" />
-                        <Label text="Label" GridPane.rowIndex="5" />
+                        <Label text="First Name" />
+                        <Label text="Last Name" GridPane.rowIndex="1" />
+                        <Label text="Street" GridPane.rowIndex="2" />
+                        <Label text="City" GridPane.rowIndex="3" />
+                        <Label text="Postal Code" GridPane.rowIndex="4" />
+                        <Label text="Birthday" GridPane.rowIndex="5" />
                         <Label text="Label" GridPane.columnIndex="1" />
                         <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -50,7 +50,7 @@
                         <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
-                  <Label layoutX="10.0" layoutY="6.0" text="Label" />
+                  <Label layoutX="10.0" layoutY="6.0" text="Personal Info" />
                   <HBox layoutX="248.0" layoutY="258.0" spacing="5.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
                      <children>
                         <Button mnemonicParsing="false" text="New" />
