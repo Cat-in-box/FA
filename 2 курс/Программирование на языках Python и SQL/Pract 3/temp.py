@@ -2,7 +2,7 @@ from sqlalchemy import *
 import pandas as pd
 from datetime import *
 
-engine = create_engine('sqlite:///C:\\Users\\191758\\Desktop\\smth.db')
+engine = create_engine('sqlite:///C:\\Users\\anast\\Documents\\GitHub\\FA\\2 курс\\Программирование на языках Python и SQL\\Pract 3\\smth.db')
 
 metadata = MetaData()
 
@@ -94,7 +94,7 @@ Account_transactions = Table('Account_transactions', metadata,
 metadata.create_all(engine)
 
 
-our_tables = {'Organizations': Organization', 
+our_tables = {'Organizations': Organizations, 
               'Clients': Clients, 
               'Bank_accounts': Bank_accounts, 
               'Operations_list': Bank_accounts, 
@@ -137,7 +137,7 @@ list_for_tables.extend(
 )
 ins = Organizations.insert()
 connection=engine.connect()
-result=connection.execute(ins, list_for_tables)
+#result=connection.execute(ins, list_for_tables)
 
 list_for_tables = []
 
@@ -146,6 +146,9 @@ inp = 'meow'
 inp = input('Введите имя таблицы для заполнения: ')
 #while inp != 'END':
 ins = our_tables[inp].insert()
+print(our_tables[inp].params)
+
+'''
 list_for_tables = [{
 'ID' : 3,
 'Name' : 'ООО MEOW',
@@ -155,3 +158,4 @@ list_for_tables = [{
 'Address' : 'Санкт-Петербург',
 }]
 result=connection.execute(ins, list_for_tables)
+'''
