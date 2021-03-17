@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Main;
 import sample.models.Person;
 import sample.utils.DateUtil;
 
@@ -26,6 +27,7 @@ public class PersonEditDialog {
     private Stage dialogStage;
     private Person person;
     private boolean okClicked = false;
+    private Main mainApp;
 
     @FXML
     private void initialize(){
@@ -66,7 +68,7 @@ public class PersonEditDialog {
             person.setStreet(streetField.getText());
             person.setCity(cityField.getText());
             person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
-            person.setBirthday(DateUtil.parse(birthdayField.toString()));
+            person.setBirthday(DateUtil.parse(birthdayField.getText().toString()));
 
             okClicked = true;
             dialogStage.close();

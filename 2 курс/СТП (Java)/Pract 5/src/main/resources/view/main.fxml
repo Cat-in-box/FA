@@ -3,9 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PersonController">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="300.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PersonController">
     <children>
-        <SplitPane dividerPositions="0.29797979797979796" layoutX="183.0" layoutY="50.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <SplitPane dividerPositions="0.3595317725752508" layoutX="183.0" layoutY="50.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
@@ -53,9 +55,9 @@
                         <Label layoutX="10.0" layoutY="6.0" text="Personal Info" />
                         <HBox layoutX="247.0" layoutY="259.0" spacing="5.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
                             <children>
-                                <Button mnemonicParsing="false" text="New" />
-                                <Button mnemonicParsing="false" text="Edit" />
-                                <Button mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete" />
+                                <Button mnemonicParsing="false" onAction="#handleNewAction" text="New" />
+                                <Button mnemonicParsing="false" onAction="#handleEditAction" text="Edit" />
+                                <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete" />
                             </children>
                         </HBox>
                     </children>

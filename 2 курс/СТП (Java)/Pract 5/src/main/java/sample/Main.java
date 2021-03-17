@@ -20,7 +20,7 @@ public class Main extends Application {
 
     public Main(){
         for(int i=0;i<20;i++){
-            personData.add(new Person("Имя" + i, "Фамилия" + i, "Щербаковская", "Москва", 222222, 22, 2, 2002));
+            personData.add(new Person("Имя" + i, "Фамилия" + i, "Щербаковская", "Москва", 222222, 2002, 2, 22));
         }
     }
     private Stage primaryStage;
@@ -39,7 +39,7 @@ public class Main extends Application {
     public void initRootLayout(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
+            loader.setLocation(getClass().getResource("/view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             Scene scene = new Scene(rootLayout);
@@ -54,7 +54,7 @@ public class Main extends Application {
     public boolean showPersonEditDialog(Person person){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/personEditDialog.fxml"));
+            loader.setLocation(getClass().getResource("/view/personEditDialog.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
 
             Stage dialogStage = new Stage();
@@ -73,10 +73,35 @@ public class Main extends Application {
             return false;
         }
     }
+
+    public boolean showPersonEditDialog(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/view/personEditDialog.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Edit Person");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            PersonEditDialog controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+
+            controller.setPerson(person);
+            dialogStage.showAndWait();;
+            return controller.isOkClicked();
+        }catch(IOException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public void showPersons(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/main.fxml"));
+            loader.setLocation(getClass().getResource("/view/main.fxml"));
             AnchorPane persons = (AnchorPane) loader.load();
 
             rootLayout.setCenter(persons);

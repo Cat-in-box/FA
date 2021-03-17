@@ -14,12 +14,16 @@
 }
 
 .menu:hover{
-         -fx-background-color: #DAA520;
+    -fx-background-color: #DAA520;
 }
 
-.tableview row:pressed{
-         -fx-background-color: #DAA520;
+.table-row-cell:selected{
+    -fx-background-color: #DAA520;
 }
+
+div#btn1 {
+	-fx-text-fill: red;
+		}
 
 /*
 .dropdown-item:hover .badge {

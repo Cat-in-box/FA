@@ -46,6 +46,29 @@ public class PersonController {
     }
 
     @FXML
+    private void handleNewAction(){
+        mainApp.showPersonEditDialog();
+        this.showPersonDetails(personTable.getSelectionModel().getSelectedItem());
+    }
+
+    @FXML
+    private void handleEditAction(){
+        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+        if(selectedIndex >=0){
+            mainApp.showPersonEditDialog(personTable.getSelectionModel().getSelectedItem());
+            this.showPersonDetails(personTable.getSelectionModel().getSelectedItem());
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(mainApp.getPrimaryStage());
+            alert.setTitle("ОШИБКА");
+            alert.setHeaderText("Пользователи не выбраны");
+            alert.setContentText("Пожалуйста выберите пользователя");
+
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
     private void handleDeleteAction(){
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
         if(selectedIndex >=0){
