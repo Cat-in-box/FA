@@ -2,7 +2,7 @@ from sqlalchemy import *
 import pandas as pd
 from datetime import *
 
-engine = create_engine('sqlite:///C:\\Users\\anast\\Documents\\GitHub\\FA\\2 курс\\Программирование на языках Python и SQL\\Pract 3\\smth.db')
+engine = create_engine('sqlite:///C:\\Users\\anast\\Documents\\GitHub\\FA\\2 курс\\Python & SQL\\Pract 3\\smth.db')
 
 metadata = MetaData()
 
