@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/191758/Downloads/Python_SQL-main/Students.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1773"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainstudent"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="exam_marks" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="78"/><column index="3" value="54"/><column index="4" value="40"/><column index="5" value="175"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="student" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="78"/><column index="2" value="64"/><column index="3" value="50"/><column index="4" value="56"/><column index="5" value="40"/><column index="6" value="62"/><column index="7" value="175"/><column index="8" value="54"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="subject" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="54"/><column index="2" value="87"/><column index="3" value="40"/><column index="4" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="university" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="54"/><column index="2" value="78"/><column index="3" value="47"/><column index="4" value="82"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 21(a)">SELECT student_id, surname, stipend*1.2
+FROM student
+ORDER BY stipend*1.2</sql><sql name="SQL 21(b)">SELECT student_id, surname, stipend*1.2
+FROM student
+ORDER BY surname</sql><sql name="SQL 22(a)">SELECT student_id, MAX(mark)
+FROM exam_marks
+GROUP BY student_id</sql><sql name="SQL 22(b)">SELECT student_id, MIN(mark)
+FROM exam_marks
+GROUP BY student_id</sql><sql name="SQL 23(a)">SELECT semester, subj_name, subj_id
+FROM subject
+ORDER BY semester DESC</sql><sql name="SQL 23(b)">SELECT semester, subj_name, subj_id
+FROM subject
+ORDER BY hour</sql><sql name="SQL 24">SELECT SUM(mark)
+FROM exam_marks
+GROUP BY exam_date
+ORDER BY SUM(mark) DESC</sql><sql name="SQL 25(a)">SELECT AVG(mark)
+FROM exam_marks
+GROUP BY exam_date
+ORDER BY AVG(mark) DESC</sql><sql name="SQL 25(b)">SELECT MIN(mark)
+FROM exam_marks
+GROUP BY exam_date
+ORDER BY MIN(mark) DESC</sql><sql name="SQL 25(c)">SELECT MAX(mark)
+FROM exam_marks
+GROUP BY exam_date
+ORDER BY MAX(mark) DESC</sql><sql name="SQL 26">SELECT mark
+FROM exam_marks
+WHERE student_id = (
+	SELECT DISTINCT student_id
+	FROM student
+	WHERE surname = 'Иванов'
+	)</sql><sql name="SQL 27">SELECT name
+FROM student
+WHERE student_id IN (
+	SELECT student_id
+	FROM exam_marks
+	WHERE subj_id = 101 AND mark &gt; (
+		SELECT AVG(mark)
+		FROM exam_marks
+		)
+	)</sql><sql name="SQL 28">SELECT name
+FROM student
+WHERE student_id IN (
+	SELECT student_id
+	FROM exam_marks
+	WHERE subj_id = 102 AND mark &lt; (
+		SELECT AVG(mark)
+		FROM exam_marks
+		)
+	)</sql><sql name="SQL 29">SELECT COUNT(subj_id)
+FROM subject
+WHERE subj_id IN (
+	SELECT subj_id
+	FROM exam_marks
+	WHERE student_id IN (
+		SELECT student_id
+		FROM (
+			SELECT student_id, COUNT(subj_id)
+			FROM exam_marks
+			GROUP BY student_id
+			HAVING COUNT(subj_id) &gt; 20
+			))
+	)</sql><sql name="SQL 30">SELECT name, student_id
+FROM student
+WHERE student_id IN (
+	SELECT student_id
+	FROM (
+		SELECT MAX(stipend), student_id
+		FROM student
+		GROUP BY city
+		)
+	)</sql><sql name="SQL 31">SELECT name, student_id
+FROM student
+WHERE city NOT IN (
+	SELECT city FROM university
+	)</sql><sql name="SQL 32(a)">SELECT student.name, student.student_id
+FROM student
+INNER JOIN university ON student.univ_id=university.univ_id
+WHERE student.city != university.city</sql><sql name="SQL 32(b)">SELECT name, student_id
+FROM student s
+WHERE city NOT IN(
+	SELECT city
+	FROM university u
+	WHERE (s.univ_id = u.univ_id) AND (s.city = u.city) OR (s.city IS NULL)
+	)</sql><sql name="SQL 33">SELECT *
+FROM student
+WHERE EXISTS (
+	SELECT *
+	FROM university
+	WHERE rating &gt; 300 and student.univ_id=university.univ_id
+	)
+</sql><sql name="SQL 34">SELECT student.name, student.student_id
+FROM student
+INNER JOIN university ON student.univ_id=university.univ_id
+WHERE rating &gt; 300
+</sql><sql name="SQL 35">SELECT *
+FROM student s1
+WHERE EXISTS (
+	SELECT *
+	FROM university u1
+	WHERE s1.city = u1.city AND u1.univ_id != s1.univ_id
+	)</sql><sql name="SQL 36">SELECT *
+FROM subject s
+WHERE EXISTS (
+	SELECT subj_id, count(student_id)
+	FROM exam_marks em
+	WHERE s.subj_id=em.subj_id
+	GROUP BY subj_id
+	HAVING count(student_id) &gt; 1	
+	)</sql><current_tab id="21"/></tab_sql></sqlb_project>
