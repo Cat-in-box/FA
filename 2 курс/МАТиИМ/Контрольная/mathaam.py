@@ -15,6 +15,7 @@ class Task_1 ():
 			self.matrix = matrix
 			for i in range(len(self.matrix)):
 				self.matrix[i, i] = 1 - sum(self.matrix[i])
+			self.E_matrix = np.eye(self.matrix.shape[0])
 	
 	def Par_1(self, k, i, j):
 		return (np.linalg.matrix_power(self.matrix, k)[i-1, j-1])
