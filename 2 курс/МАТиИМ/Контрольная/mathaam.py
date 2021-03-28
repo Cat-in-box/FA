@@ -15,9 +15,16 @@ class Task_1 ():
 			self.matrix = matrix
 			for i in range(len(self.matrix)):
 				self.matrix[i, i] = 1 - sum(self.matrix[i])
+	
+	def Par_1(self, k, i, j):
+		return (np.linalg.matrix_power(self.matrix, k)[i-1, j-1])
+	
+	def Par_2(self, k, A):
+		return np.dot(A, np.linalg.matrix_power(self.matrix, k))
 
-	#Вспомогательный метод - вероятность перехода
-	def Summ_steps(self, buf_matrix_1):
+	def Par_3(self, k, i, j):
+
+		def Making_a_step (buf_matrix_1):
 			buf_matrix_2 = np.zeros(self.matrix.shape)
 			for i in range(self.matrix.shape[0]):
 				for j in range(self.matrix.shape[1]):
@@ -25,36 +32,71 @@ class Task_1 ():
 						[self.matrix[i, m] * buf_matrix_1[m, j] if m != j else 0 for m in range(self.matrix.shape[0])]
 					)
 			return buf_matrix_2
-	
 
-	def Par_1(self, k, i, j):
-		return (np.linalg.matrix_power(self.matrix, k)[i-1, j-1])
-	
-	def Par_2(self, k, A):
-		return np.dot(np.linalg.matrix_power(self.matrix, k), A)
-
-	def Par_3(self, k, i, j):
-
-		buf_matrix_1 = self.matrix
-		for _ in range(1, k):
-			buf_matrix_1 = self.Summ_steps(buf_matrix_1)
+		buf_matrix_1 = np.copy(self.matrix)
+		for _ in range(2, k+1):
+			buf_matrix_1 = Making_a_step(buf_matrix_1)
 		return buf_matrix_1[i-1, j-1]
 
 	def Par_4(self, i, j, k):
+
+		def Making_a_step_modif (buf_matrix_1, buf_prev_matrix):
+			cur_len = buf_matrix_1.shape[0]
+			buf_matrix_2 = np.zeros((cur_len, cur_len))
+			for i in range(cur_len):
+				for j in range(cur_len):
+					buf_matrix_2[i, j] = sum(
+						[buf_matrix_1[i, m] * buf_prev_matrix[m, j] if m != j else 0 for m in range(cur_len)]
+					)
+			return buf_matrix_2
+		
+		buf_matrix_1 = np.copy(self.matrix)
+		buf_prev_matrix = np.copy(self.matrix)
+		result = np.copy(self.matrix)
+		for _ in range(1, k):
+			buf_prev_matrix = Making_a_step_modif(buf_matrix_1, buf_prev_matrix)
+			result += buf_prev_matrix
+		return result[i-1, j-1]
+	 
+	def Par_5(self, i, j):
+
+		def Making_a_step (buf_matrix_1):
+			buf_matrix_2 = np.zeros(self.matrix.shape)
+			for i in range(self.matrix.shape[0]):
+				for j in range(self.matrix.shape[1]):
+					buf_matrix_2[i, j] = sum(
+						[self.matrix[i, m] * buf_matrix_1[m, j] if m != j else 0 for m in range(self.matrix.shape[0])]
+					)
+			return buf_matrix_2
+
+		buf_matrix = self.matrix.copy()
+		result = buf_matrix[i-1, j-1]
+		for k in range(2, 10000):
+			buf_matrix = Making_a_step(buf_matrix)
+			result += k * buf_matrix[i-1, j-1]
+		return result
+
+	def Par_6(self, j, k):
+		buf_matrix = np.zeros(self.matrix.shape)
+		for i in range(1, k):
+			buf_matrix += self.Par_6(j, i) * np.linalg.matrix_power(self.matrix, k-i)
+		return ((np.linalg.matrix_power(self.matrix, k) - buf_matrix)[j-1, j-1])
+
+	def Par_7(self, j, k):
 		return sum(
-			[self.Par_3(n, i-1, j-1) for n in range(1, k+1)]
+			self.Par_6(j-1, n) for n in range(1, k+1)
 		)
 	
-	def Par_5(self, i, j):
-		i, j = i-1, j-1
-		buf_matrix = self.matrix
-		count = self.matrix[i, j]
-		for k in range(2, 1000):
-			buf_matrix = self.Summ_steps(buf_matrix)
-			count += k * buf_matrix[i, j]
-		return count
+	def Par_8(self, j):
+		return sum(
+			k*self.Par_6(j-1, k) for k in range(1, 20)
+		)
 
-
+	def Par_9(self):
+		M_matrix = self.matrix.T - self.E_matrix
+		M_matrix[-1, :] = 1
+		B = np.append(np.zeros(M_matrix.shape[0]-1), 1)
+		return np.dot(np.linalg.inv(M_matrix), B)
 
 if __name__ == "__main__":
 	print("Задание 1")
@@ -78,3 +120,7 @@ if __name__ == "__main__":
 	print('3) вероятность первого перехода за 6 шагов из состояния 13 в состояние 1: ', Task1.Par_3(6, 13, 1))
 	print('4) вероятность перехода из состояния 1 в состояние 6 не позднее чем за 6 шагов: ', Task1.Par_4(1, 6, 6))
 	print('5) среднее количество шагов для перехода из состояния 2 в состояние 1: ', Task1.Par_5(2, 1))
+	print('6) вероятность первого возвращения в состояние 4 за 7 шагов: ', Task1.Par_6(4, 7))
+	print('7) вероятность возвращения в состояние 5 не позднее чем за 7 шагов: ', Task1.Par_7(5, 7))
+	print('8) среднее время возвращения в состояние 7: ', Task1.Par_8(7))
+	print('9) установившиеся вероятности:\n', Task1.Par_9())
