@@ -53,7 +53,7 @@ class Task_2 ():
 
 	def Par_G(self):
 		return sum(
-			self.X[:self.m -1]
+			self.X[:self.m]
 		)
 
 	def Par_H(self):
