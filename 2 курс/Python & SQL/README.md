@@ -7,3 +7,6 @@
 * [Практика 1. Абстрактная бд финансовой организации](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%201)
 * [Практика 2. Повторяем запросы на SQL](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%202)
 * [Практика 3. Заполняем таблицы инсертами в базе из практики 1](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%203)
+* [Практика 4. Преобразование вывода, встроенные фанкции, агрегирование и групповые функции](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%204)
+* [Практика 5. Повторяем практику 4 в SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%205)
+* [Практика 6. NULL в агрегирующих функциях, вложенные подзапросы, EXISTS](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%206)
