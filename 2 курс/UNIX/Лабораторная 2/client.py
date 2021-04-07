@@ -1,10 +1,10 @@
 import socket
 from time import sleep
-import os
+import scanner
 
 sock = socket.socket()
 sock.setblocking(1)
-os.system('python scanner.py')
+scanner.scann()
 
 '''
 N = 2**16 - 1

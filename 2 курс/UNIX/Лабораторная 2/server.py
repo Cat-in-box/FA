@@ -16,7 +16,7 @@ class T(threading.Thread):
 			print(msg)
 
 sock = socket.socket()
-sock.bind(('', 9090))
+sock.bind(('', 90))
 sock.listen(0)
 
 counter = 0
