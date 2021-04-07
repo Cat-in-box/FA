@@ -1,39 +1,34 @@
 import socket
-from threading import Timer
+import sys
 
-def stop():
-	log_file.write('SYS: Остановка сервера')
+def file_writer(m):
+	log_file = open('C:/Users/anast/Desktop/1/log_file.txt', 'a')
+	log_file.write(m, '\n')
 	log_file.close()
-	exit(0)
 
-log_file = open('./log_file.txt', 'w')
+file_writer('SYS: Запуск сервера\n')
 
-log_file.write('SYS: Запуск сервера')
 sock = socket.socket()
 sock.bind(('', int(input('Введите номер порта: '))))
+
 while True:
-	log_file.write('SYS: Начало прослушивания порта')
+	file_writer('SYS: Начало прослушивания порта\n')
 	sock.listen(1)
-	timeout = 10
-	t = Timer(timeout, stop)
-	t.start()
-	log_file.write('SYS: Подключение клиента')
+	file_writer('SYS: Подключение клиента\n')
 	conn, addr = sock.accept()
-	t.cancel()
-	print(addr)
+	file_writer('Подключились к' + str(addr))
 
 	msg = ''
 
-	log_file.write('SYS: Прием данных от клиента')
+	file_writer('SYS: Прием данных от клиента\n')
 	while True:
 		data = conn.recv(1024)
 		if not data:
 			break
-		msg += data.decode()
-		log_file.write('SYS: Отправка данных клиенту')
+		msg = data.decode()
+		file_writer('SYS: Отправка данных клиенту\n')
 		conn.send(data)
+		file_writer('Отправили' + str(msg) + '\n')
 
-	print(msg)
-
-	log_file.write('SYS: Отключение клиента')
+	file_writer('SYS: Отключение клиента\n')
 	conn.close()
