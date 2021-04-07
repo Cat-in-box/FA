@@ -1,21 +1,26 @@
 import socket
 from time import sleep
 
+def file_writer(m):
+	log_file = open('C:/Users/anast/Desktop/1/log_file.txt', 'a')
+	log_file.write('SYS', m, '\n')
+	log_file.close()
+
 sock = socket.socket()
 sock.setblocking(1)
-print('SYS: Соединение с сервером')
+file_writer('SYS: Соединение с сервером')
 sock.connect((input('Введите имя хоста: '), int(input('Введите номер порта: '))))
 
 msg = ''
 
 while msg != 'exit':
     msg = input('Введите сообщение: ')
-    print('SYS: Отправка данных серверу')
+    file_writer('SYS: Отправка данных серверу')
     sock.send(msg.encode())
 
-    print('SYS: Прием данных от сервера')
+    file_writer('SYS: Прием данных от сервера')
     data = sock.recv(1024)
-    print(data.decode())
+    file_writer(data.decode())
 
-print('SYS: Разрыв соединения с сервером')
+file_writer('SYS: Разрыв соединения с сервером')
 sock.close()
