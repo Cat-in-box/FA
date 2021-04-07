@@ -18,8 +18,6 @@ def login(sock, addr):
 			if clients[a] == sock.recv(1024).decode():
 				flag = False
 				sock.sendto(str.encode(a), addr)
-			else:
-				sock.sendto(str.encode('False'), addr)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind (('', 9090))

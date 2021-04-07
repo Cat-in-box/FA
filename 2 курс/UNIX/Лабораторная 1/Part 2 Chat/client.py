@@ -28,23 +28,22 @@ class Client():
             else:
                 self.auth = False
         elif a == 'Жду пароль':
-            while self.auth == False:
+            while a == 'Жду пароль':
                 self.sor.sendto(str.encode(input('Введите пароль: ')), self.server)
                 a = self.sor.recv(1024).decode()
-                if a != 'False':
-                    self.auth = True
-                    self.name = a
-                else:
-                    self.auth = False
+            self.auth = True
+            self.name = a
 
 Client_new = Client()
 Client_new.login()
-msg = ''
+inp = input('Введите сообщение: ')
 
-while msg != 'exit':
-    msg = '[' + Client_new.name + '] ' + input('Введите сообщение: ')
+while inp != 'exit':
+    msg = '[' + Client_new.name + '] ' + inp
     Client_new.sor.sendto(msg.encode(), Client_new.server)
     data = Client_new.sor.recv(1024)
     print(data.decode())
+    inp = input('Введите сообщение: ')
 
+print('вышли')
 Client_new.sor.close()
