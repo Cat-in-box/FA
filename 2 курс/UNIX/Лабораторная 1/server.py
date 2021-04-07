@@ -1,36 +1,39 @@
 import socket
+from threading import Timer
 
-global clients
-clients = {} # Словарь где храним адреса клиентов
-connectings = []
+def stop():
+	log_file.write('SYS: Остановка сервера')
+	log_file.close()
+	exit(0)
 
-def login(sock, addr):
-	a = sock.recv(1024).decode()
-	if a not in clients: # Если такого клиента нету , то добавить
-		sock.sendto(str.encode('Жду регистрацию'), addr)
-		b = sock.recv(1024).decode()
-		clients[a] = b
-		sock.sendto(str.encode(a), addr)
-	else:
-		flag = True
-		while flag:
-			sock.sendto(str.encode('Жду пароль'), addr)
-			if clients[a] == sock.recv(1024).decode():
-				flag = False
-				sock.sendto(str.encode(a), addr)
-			else:
-				sock.sendto(str.encode('False'), addr)
+log_file = open('./log_file.txt', 'w')
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind (('', 9090))
-print ('Start Server')
-
+log_file.write('SYS: Запуск сервера')
+sock = socket.socket()
+sock.bind(('', int(input('Введите номер порта: '))))
 while True:
-	conn, addr = sock.recvfrom(1024)
-	connectings.append(addr)
-	print (addr[0], addr[1])
-	if conn.decode() == 'Connect to server':
-		login(sock, addr)
-	else:
-		for connect in connectings:
-			sock.sendto(conn, connect)
+	log_file.write('SYS: Начало прослушивания порта')
+	sock.listen(1)
+	timeout = 10
+	t = Timer(timeout, stop)
+	t.start()
+	log_file.write('SYS: Подключение клиента')
+	conn, addr = sock.accept()
+	t.cancel()
+	print(addr)
+
+	msg = ''
+
+	log_file.write('SYS: Прием данных от клиента')
+	while True:
+		data = conn.recv(1024)
+		if not data:
+			break
+		msg += data.decode()
+		log_file.write('SYS: Отправка данных клиенту')
+		conn.send(data)
+
+	print(msg)
+
+	log_file.write('SYS: Отключение клиента')
+	conn.close()
