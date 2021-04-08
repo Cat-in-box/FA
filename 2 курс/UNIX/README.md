@@ -28,4 +28,6 @@
 
 ## II семестр
 
-* [Лабораторная 0. Git](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/UNIX/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%200)
+* [Лабораторная 0. Git basics](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/UNIX/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%200)
+* [Лабораторная 1. Echo server](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/UNIX/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%201)
+* [Лабораторная 2. Threaded server](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/UNIX/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%202)
