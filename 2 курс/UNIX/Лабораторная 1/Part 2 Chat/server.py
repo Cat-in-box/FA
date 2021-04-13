@@ -5,19 +5,20 @@ clients = {} # Словарь где храним адреса клиентов
 connectings = []
 
 def login(sock, addr):
-	a = sock.recv(1024).decode()
-	if a not in clients: # Если такого клиента нету , то добавить
+	if addr[0] not in clients: # Если такого клиента нету , то добавить
 		sock.sendto(str.encode('Жду регистрацию'), addr)
+		a = sock.recv(1024).decode()
 		b = sock.recv(1024).decode()
-		clients[a] = b
+		clients[addr[0]] = (a, b)
 		sock.sendto(str.encode(a), addr)
 	else:
+		sock.sendto(str.encode(clients[addr[0]][0]), addr)
 		flag = True
 		while flag:
 			sock.sendto(str.encode('Жду пароль'), addr)
-			if clients[a] == sock.recv(1024).decode():
+			if clients[addr[0]][1] == sock.recv(1024).decode():
 				flag = False
-				sock.sendto(str.encode(a), addr)
+				sock.sendto(str.encode(clients[addr[0]][0]), addr)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind (('', 9090))

@@ -15,11 +15,10 @@ class Client():
 
     def login(self):
         self.sor.sendto(str.encode('Connect to server'), self.server) #Уведомляем сервер о подключении
-        self.sor.sendto(str.encode(input('Введите ваш логин: ')), self.server)
         a = self.sor.recv(1024).decode()
         if a == 'Жду регистрацию':
-            b = input('Введите ваш пароль: ')
-            self.sor.sendto(str.encode(b), self.server)
+            self.sor.sendto(str.encode(input('Введите ваш логин: ')), self.server)
+            self.sor.sendto(str.encode(input('Введите ваш пароль: ')), self.server)
             a = self.sor.recv(1024).decode()
             if a != 'False':
                 print('зарегались')
@@ -27,7 +26,9 @@ class Client():
                 self.name = a
             else:
                 self.auth = False
-        elif a == 'Жду пароль':
+        else:
+            print('Привет,', a)
+            a = self.sor.recv(1024).decode()
             while a == 'Жду пароль':
                 self.sor.sendto(str.encode(input('Введите пароль: ')), self.server)
                 a = self.sor.recv(1024).decode()
