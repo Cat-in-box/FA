@@ -10,5 +10,5 @@
 * [Практика 4. Преобразование вывода, встроенные фанкции, агрегирование и групповые функции](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%204)
 * [Практика 5. Повторяем практику 4 в SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%205)
 * [Практика 6. NULL в агрегирующих функциях, вложенные подзапросы, EXISTS](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%206)
-* [Практика 7. ](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%207)
+* [Практика 7. Транзакции на SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%207)
 * [Практика 8. Переписали запрос со страницы 70 на SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%208)
