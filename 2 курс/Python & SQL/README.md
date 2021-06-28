@@ -12,3 +12,4 @@
 * [Практика 6. NULL в агрегирующих функциях, вложенные подзапросы, EXISTS](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%206)
 * [Практика 7. Транзакции на SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%207)
 * [Практика 8. Переписали запрос со страницы 70 на SQLAlchemy](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/Pract%208)
+> [Зачет](https://github.com/Cat-in-box/FA/tree/main/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL/%D0%97%D0%B0%D1%87%D0%B5%D1%82)
