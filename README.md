@@ -19,3 +19,8 @@
 * [Программирование на языках Python и SQL](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/Python%20%26%20SQL)
 * [Современные технологии программирования (Java)](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%A1%D0%A2%D0%9F%20(Java))
 * [Управление качеством программных систем](https://github.com/Cat-in-box/FA/tree/master/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%A3%D0%9A%D0%9F%D0%A1)
+
+## 3 курс
+* [Обработка данных и моделирование в Microsoft Excel](https://github.com/Cat-in-box/FA/tree/main/3%20%D0%BA%D1%83%D1%80%D1%81/Excel)
+* [Технологии обработки больших данных (Python numpy)](https://github.com/Cat-in-box/FA/tree/main/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94)
+* [Технологии разработки web-приложений](https://github.com/Cat-in-box/FA/tree/main/3%20%D0%BA%D1%83%D1%80%D1%81/Web)
