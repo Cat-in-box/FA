@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+<title>Кот</title>
+</head>
+
+<html>
+<body>
+
+<h1>Кот</h1>
+
+<img src="image_861904161026392809492.gif" alt="альтернативный текст">
+
+<p><button type="button"
+onclick="
+document.getElementById('purring').textContent += 'purr '; document.getElementById('purring_counter').textContent = Number(document.getElementById('purring_counter').textContent) + 1"
+>
+Погладить
+</button></p>
+
+<p id="purring"></p>
+
+</body>
+<p id="purring_counter">0</p>
+</html>
