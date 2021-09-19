@@ -9,17 +9,29 @@
 
 <h1>Кот</h1>
 
-<img src="image_861904161026392809492.gif" alt="альтернативный текст">
+<img id="the_cat" src="image_861904161026392809492.gif" alt="*мурчит*">
 
-<p><button type="button"
-onclick="
-document.getElementById('purring').textContent += 'purr '; document.getElementById('purring_counter').textContent = Number(document.getElementById('purring_counter').textContent) + 1"
->
+<p><button id="main_button" type="button"
+onclick="if (document.getElementById('purring_counter').textContent == '20') {
+SHH();
+} else {
+document.getElementById('purring').textContent += 'purr '; 
+document.getElementById('purring_counter').textContent = Number(document.getElementById('purring_counter').textContent) + 1;
+}">
 Погладить
 </button></p>
 
 <p id="purring"></p>
 
+<script>function SHH() {
+document.getElementById('the_cat').src='animesher.com_chi-chis-sweet-home-gato-1659899.jpg';
+document.getElementById('the_cat').alt='*шипит*';
+document.getElementById('the_cat').width=460;
+document.getElementById('purring_counter').style.display='none';
+document.getElementById('purring').style.display='none';
+document.getElementById('main_button').style.display='none';
+}</script>
+
 </body>
-<p id="purring_counter">0</p>
+<p id="purring_counter" style="display:none">0</p>
 </html>
