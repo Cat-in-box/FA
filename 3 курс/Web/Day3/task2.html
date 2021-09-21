@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    const M = ["Янв", "Фев", "Мар", "Апр", "Май", "Июн"];
+
+    function loadM() { //построение списка выбора и таблицы
+        s = "<table border><tr>"
+        for (i = 0; i < M.length; i++) s += "<td>" + M[i];
+        s += "</table>"
+        document.getElementById("demo").innerHTML = s
+        k = frm.elements.length
+        for (i = 0; i < k; i++) {
+            alert(frm.elements[i].type + " " + frm.elements[i].name)
+        }
+        with (document.frm.mont) {
+            options.length = M.length
+            for (i = 0; i < M.length; i++) {
+                options[i].value = "M" + i
+                options[i].text = M[i]
+            }
+        }
+    }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+<p align="right">Жевагина Анастасия ПИ19-3</p>
+<h1>Задание:</h1>
+<h2>В форме элемент ввода текста и кнопка. По кнопке выводится число гиперссылок в html-документе, в которых указан протокол http:</h2>
+
+
+<form name="form1">
+ <p>Введите количество меток</p>
+ <p><input name="a"> <button>Тык</button></p>
+</form>
+
+</body>
+</html>
