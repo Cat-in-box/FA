@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+<p align="right">Жевагина Анастасия ПИ19-3</p>
+<h1>Задание:</h1>
+<h2>В форме элемент ввода текста и кнопка. По кнопке выводится число гиперссылок в html-документе, в которых указан протокол http:</h2>
+
+<p align="center"><input id='result' type='number'></p>
+<p align="center"><button id="button" type="button" onclick="F();">
+Кнопка
+</button></p>
+
+<p>Ссылки:</p>
+<ul>
+<li><a href="http://yandex.ru/">Ссылка</a></li>
+<li><a href="http://www.google.ru/">Еще ссылка</a></li>
+<li><a href="https://s1.1zoom.me/big3/791/Cats_Glance_Whiskers_460617.jpg">Опять ссылка</a></li>
+<li><a href="http://www.yahoo.com/">Сновая ссылка</a></li>
+</ul>
+
+<script>
+    function F() {
+	document.getElementById('result').value = 0
+        let h = document.getElementsByTagName("a");
+        for (i = 0; i < h.length; i++) {
+            if (h[i].href.slice(0, 5) == "http:") {
+		document.getElementById('result').value = parseInt(document.getElementById('result').value) + 1;
+	    };
+        };
+    };
+</script>
+
+</body>
+</html>
