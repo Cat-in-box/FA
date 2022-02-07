@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="CAT" id="830CD8B3-07E0-D43A-2D1E-D13659A60D8B" version="3.5">
-<createdBy>georgiydemo</createdBy>
-<createdTime>2020-11-09 14:31:27 UTC</createdTime>
-<ownerDesignName>CAT</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>830CD8B3-07E0-D43A-2D1E-D13659A60D8B</designId>
-</OSDM_Design>
