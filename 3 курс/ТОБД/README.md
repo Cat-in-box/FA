@@ -4,6 +4,8 @@
 
 Обработка больших данных на Python
 
+ **:white_check_mark:[Датасеты](https://disk.yandex.ru/d/2SjPqoO7OhoTOg)**
+
 * [Лабораторная 1. Numpy](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab1)
 * [Лабораторная 2. Pandas](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab2)
 * [Лабораторная 3. Profiling](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab3)
