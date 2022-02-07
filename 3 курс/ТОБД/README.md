@@ -11,6 +11,7 @@
 * [Лабораторная 5. Data files 2](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab5)
 * [Лабораторная 6. Database](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab6)
 * [Лабораторная 7. Excel](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab7)
+____
 * [Лабораторная 8. String](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab8)
 * [Лабораторная 9. String 2](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab9)
 * [Лабораторная 10. Multiprocessing](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94/Lab10)
