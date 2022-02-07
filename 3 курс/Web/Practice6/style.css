@@ -1,0 +1,22 @@
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+table {
+  border: 1px solid rgb(105, 131, 95);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+th {
+  font-weight: bold;
+  color: rgb(70, 85, 64);
+  border-bottom: 1px dashed rgb(105, 131, 95);
+  padding: 12px 17px;
+}
+td {
+  color: rgb(70, 85, 64);
+  padding: 7px 17px;
+}
+tr:hover td {
+  background: #e5ca99a9;
+}
