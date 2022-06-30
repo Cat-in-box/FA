@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="31BED5FE-9A08-9748-45FF-1BA41B56601C" name="SCHEDULE">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>E25E2AD2-D991-BA84-E29E-ADA70C14524A</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="35B1BB76-6A55-0DF5-DF5E-118EC61E0122">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>8A5CF6A6-5509-AC30-5EE4-4560BFE14D39</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trip_id" id="437D7287-AD5F-EBDD-4621-0DF2D18EF5B6">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>7164F8C9-BAF9-48A2-092A-966BDD9441A0</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A07F422C-CD30-EB64-3EA7-9A2634AD1050" referredColumn="EB308FE0-9566-E70C-7DD4-D8D1FEB4E11C"/>
+</associations>
+</Column>
+<Column name="train_id" id="0D36DF24-3CE9-A277-DC7C-143B652195FE">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>D9D206FB-783E-FF76-5832-6F0FBAA488FE</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BBEACC12-894C-4154-25C6-14AAD00ED29B" referredColumn="10BE6D6D-3A69-D72F-387D-116C223BF0E0"/>
+</associations>
+</Column>
+<Column name="date_and_time" id="F6754E28-6286-31A6-EF18-D5C27C995DCF">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>915DC73B-22AB-28A0-A003-454447581EE5</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="platform" id="D4425A91-C803-3037-8BD1-1FD4B88D4206">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>6A81AE3D-DFBB-1DF8-5BD0-DAD7E2593D2B</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6FC5764-77AA-55D3-E63B-D5457BB229F6" name="SCHEDULE_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>3A2F325F-7CC8-5B16-0DBB-55B2C06E41B1</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35B1BB76-6A55-0DF5-DF5E-118EC61E0122"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D312A96-CC20-857D-20C0-C56308441C35" name="SCHEDULE_TRAINS_FK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>4282F48E-3ABD-6BC9-2597-7015F9DB6214</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D36DF24-3CE9-A277-DC7C-143B652195FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B06D1CAB-2C31-2A5E-E199-E5DBED554F07" name="SCHEDULE_TRIPS_FK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>B878E48F-74C2-F007-A57A-543B15746375</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="437D7287-AD5F-EBDD-4621-0DF2D18EF5B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

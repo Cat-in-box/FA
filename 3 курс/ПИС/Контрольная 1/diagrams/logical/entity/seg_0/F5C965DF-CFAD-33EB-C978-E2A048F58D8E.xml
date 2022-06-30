@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F5C965DF-CFAD-33EB-C978-E2A048F58D8E" name="CLIENTS">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:08:57 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1CBF309F-0DA3-1869-F3A4-A118ACE889A9">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:09:05 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="DC7CE82C-6471-F1C4-B4A9-D0875F816CA3">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:13:40 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_password" id="223385A8-85E8-0DD6-A508-86A0C6DB18B7">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:13:58 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="passpors" id="E3E7AD1A-78A0-63D9-3860-A4EB7552B763">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:09:13 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last_name" id="A5AE48BA-EAAE-857D-81BB-88837743EF4D">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:11:46 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first_name" id="552ACEA3-FD1B-C8C8-0E28-CDA54120D9A3">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:12:17 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="patronymic" id="AE15B43C-2891-82B1-7970-4056FD6AF0E3">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:12:17 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_of_birth" id="1D220B7A-A833-425E-CEFE-87528DFD44BD">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:12:15 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="D2D3F303-00B1-AB28-55FA-ECB3B6FB6913">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:13:18 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FC4B27A8-68BA-FF9D-9EE4-42F7A2F0145B" name="CLIENTS PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:09:12 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1CBF309F-0DA3-1869-F3A4-A118ACE889A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

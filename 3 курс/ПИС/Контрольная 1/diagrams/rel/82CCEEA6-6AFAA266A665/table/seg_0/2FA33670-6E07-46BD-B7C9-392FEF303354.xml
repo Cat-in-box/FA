@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FA33670-6E07-46BD-B7C9-392FEF303354" name="CARRIAGE_TYPES">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>D05D7E63-0743-CC66-0DE9-67D3CFB1C5CA</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5A067A19-C79A-DD9C-2565-B278F846D2F5">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>0B9DF733-2D31-6318-5C38-98D8FAEEA77D</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="blocks_number" id="B4E3AD9A-DD28-9E4E-4F57-B55104AF7069">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>3E958BF8-0B97-0AB4-D173-480BF0303242</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="block_seats_number" id="2242C3B4-A4D1-54E1-889E-EB20893AFFEE">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>8248C8A3-87A9-6E79-6232-4D96AAFDFF89</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="D7C9A257-D5E1-D040-352E-0A25FD528DB3">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>47E44BCD-25E1-484F-8852-DE28B1BFDF0B</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D32FE74-1D7B-5D0B-7491-ADE4CC7011BF" name="CARRIAGE_TYPES_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>B3BB752C-F785-837B-63F7-4047D31B20F4</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A067A19-C79A-DD9C-2565-B278F846D2F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

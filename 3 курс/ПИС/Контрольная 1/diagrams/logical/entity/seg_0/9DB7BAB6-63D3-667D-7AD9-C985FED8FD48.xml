@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9DB7BAB6-63D3-667D-7AD9-C985FED8FD48" name="TICKETS">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:44:07 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="9FCA39FF-27A0-D0EC-46A9-59D5CCE6FFC7">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:42:02 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="client_id" id="FE80B603-12E8-3DD7-62CC-305E726D64E6">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:04:47 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="schedule_id" id="1063FC90-10BC-13AF-F4AA-EB37E2E7B32F">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:24:28 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="railway_carriage" id="1E6AC601-C035-5564-2B86-2F9DAD47BD3B">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:27:40 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="place" id="7BF84FA6-C0A6-1226-B5EE-1F130E3FC779">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:29:19 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="534BAF2A-FCDB-4146-927A-FBB06B2EB530">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:29:19 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="28663C53-2049-509E-2772-5463B13DF259">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:38:33 UTC</createdTime>
+<generatorID>8D3ECAD7-B22F-C09A-306D-3320D5424209</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<referedAttribute>1CBF309F-0DA3-1869-F3A4-A118ACE889A9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="E34A06FF-0D7C-EE01-C8CE-7E612F040A91">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:43:01 UTC</createdTime>
+<generatorID>787782E6-ECFC-7496-08AE-4EEF899EDD52</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<referedAttribute>8A5CF6A6-5509-AC30-5EE4-4560BFE14D39</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="037D4133-4A4F-0DEA-CEAC-06C852107A8D" name="TICKETS PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 15:05:12 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9FCA39FF-27A0-D0EC-46A9-59D5CCE6FFC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D05D7E63-0743-CC66-0DE9-67D3CFB1C5CA" name="CARRIAGE_TYPES">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 17:36:29 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="0B9DF733-2D31-6318-5C38-98D8FAEEA77D">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 17:36:54 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="blocks_number" id="3E958BF8-0B97-0AB4-D173-480BF0303242">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 17:44:11 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="block_seats_number" id="8248C8A3-87A9-6E79-6232-4D96AAFDFF89">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 17:37:13 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="47E44BCD-25E1-484F-8852-DE28B1BFDF0B">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:40:22 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B3BB752C-F785-837B-63F7-4047D31B20F4" name="CARRIAGE_TYPES PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 17:37:06 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0B9DF733-2D31-6318-5C38-98D8FAEEA77D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

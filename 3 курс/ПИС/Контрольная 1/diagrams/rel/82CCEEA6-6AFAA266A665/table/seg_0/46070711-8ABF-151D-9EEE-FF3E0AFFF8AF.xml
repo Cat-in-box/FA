@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="46070711-8ABF-151D-9EEE-FF3E0AFFF8AF" name="TRAINS">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>BEAD69BC-2E83-ABAA-F2BC-F15D7887204C</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="10BE6D6D-3A69-D72F-387D-116C223BF0E0">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>41A37C8F-E0E9-50C5-16EE-9917296B471A</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="train_type" id="152BB391-2CE3-7615-A173-D6DFBD6B7021">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>7D4FC442-6A16-FADB-229E-693B65CCBB25</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="issue_year" id="E06D4181-E4F6-865C-526D-5D3AB9F5367C">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>64D1E766-188D-C563-1043-8AEAB7447E8F</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EF5ED9CB-2C66-5BE2-AF71-8D8A3BFDE475" name="TRAINS_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>898A7CCE-CE3B-F527-3877-A4B653E50DA2</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10BE6D6D-3A69-D72F-387D-116C223BF0E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

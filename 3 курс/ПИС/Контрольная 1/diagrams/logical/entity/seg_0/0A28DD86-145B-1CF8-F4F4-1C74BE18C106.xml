@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0A28DD86-145B-1CF8-F4F4-1C74BE18C106" name="TRIPS">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:42:24 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="72D98224-1550-5B50-B9A8-C666BAC282C5">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-18 17:34:25 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departure_station" id="CCF4C9FF-27A7-7037-4210-85AF8E692A5B">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:42:46 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="destination_station" id="5D55099E-5D6E-EAEE-CDEC-986A2156A094">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:43:09 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="07744DB4-E790-67F6-9D57-03A9A1A3B95D">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 18:07:58 UTC</createdTime>
+<generatorID>AFCB8AB5-F022-6A37-BE75-854B9CCED88D</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<referedAttribute>D11D4A6C-1549-FE43-8880-F60DD1273938</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="2CAC99DB-B828-2F64-463F-2AECDC7405DF">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 18:08:07 UTC</createdTime>
+<generatorID>D2970979-8B30-49BC-B51F-22B3346B814F</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<referedAttribute>D11D4A6C-1549-FE43-8880-F60DD1273938</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5A38EEF1-D5FA-339C-03EC-2BE5E27D3844" name="TRIPS PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-04-14 14:42:36 UTC</createdTime>
+<ownerDesignName>diagrams</ownerDesignName>
+<engineerTo>
+<item key="82CCEEA6-56FD-1DF9-6AC6-6AFAA266A665" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>72D98224-1550-5B50-B9A8-C666BAC282C5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

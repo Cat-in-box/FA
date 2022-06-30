@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2A7B063-B007-AA9B-9692-B8D8B93D0D33" name="STATIONS">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>5B823D2F-2174-382B-61B5-799B804972D3</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="82CED087-2613-5861-81F9-7DF62F2ECD70">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>D11D4A6C-1549-FE43-8880-F60DD1273938</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="station_name" id="16B11A6A-F82F-4068-6021-712681DD3029">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>C6A02E0F-CA28-73A8-9027-851637FE82D6</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AC74225-F894-FCE6-65C2-9CE6910BECAE" name="STATIONS_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>A0A2E32E-9D84-7A38-218C-0250646D3534</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82CED087-2613-5861-81F9-7DF62F2ECD70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

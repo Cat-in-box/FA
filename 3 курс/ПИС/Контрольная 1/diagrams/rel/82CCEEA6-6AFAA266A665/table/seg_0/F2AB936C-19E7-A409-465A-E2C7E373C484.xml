@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F2AB936C-19E7-A409-465A-E2C7E373C484" name="TICKETS">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>9DB7BAB6-63D3-667D-7AD9-C985FED8FD48</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FBD26404-6540-13F0-A610-443FBB91E8E3">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>9FCA39FF-27A0-D0EC-46A9-59D5CCE6FFC7</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="client_id" id="1693587C-EC64-7377-E0CB-6599F25AD95A">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>28663C53-2049-509E-2772-5463B13DF259</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05FC930D-FAFD-83A2-13FF-4916582F246A" referredColumn="0C4610A5-5628-2D20-8E96-9B4B3AD924BE"/>
+</associations>
+</Column>
+<Column name="schedule_id" id="9E616740-1435-5A4D-69CF-D4DA08D13529">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>E34A06FF-0D7C-EE01-C8CE-7E612F040A91</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A6E5B6C-3A41-4E55-DE9A-C6F8A7660257" referredColumn="35B1BB76-6A55-0DF5-DF5E-118EC61E0122"/>
+</associations>
+</Column>
+<Column name="railway_carriage" id="DD34E525-C82B-9107-DB66-58FBA252B7B4">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>1E6AC601-C035-5564-2B86-2F9DAD47BD3B</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="place" id="902F3020-50A6-A48B-578B-12C091ED2811">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>7BF84FA6-C0A6-1226-B5EE-1F130E3FC779</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="7A617077-B3E0-02D1-02C6-413950A13AB9">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>534BAF2A-FCDB-4146-927A-FBB06B2EB530</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AD21284F-16F3-65D7-3BCB-26DCA7BAF1F8" name="TICKETS_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>037D4133-4A4F-0DEA-CEAC-06C852107A8D</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBD26404-6540-13F0-A610-443FBB91E8E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FEE9ABF-4AF8-9F84-91D5-F4F6C4E47BEB" name="TICKETS_CLIENTS_FK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>8D3ECAD7-B22F-C09A-306D-3320D5424209</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1693587C-EC64-7377-E0CB-6599F25AD95A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E6A06FE-05D9-F083-AF24-73C2EBFB56D4" name="TICKETS_SCHEDULE_FK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>787782E6-ECFC-7496-08AE-4EEF899EDD52</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E616740-1435-5A4D-69CF-D4DA08D13529"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

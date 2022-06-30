@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8CCEC0D4-42F2-01B5-7784-998967021353" name="TRIPS">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>0A28DD86-145B-1CF8-F4F4-1C74BE18C106</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EB308FE0-9566-E70C-7DD4-D8D1FEB4E11C">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>72D98224-1550-5B50-B9A8-C666BAC282C5</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departure_station" id="14360097-0550-6D18-2842-BF6AB77087A2">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>07744DB4-E790-67F6-9D57-03A9A1A3B95D</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="291B1123-C36E-4F44-0CC1-9E553030D09D" referredColumn="82CED087-2613-5861-81F9-7DF62F2ECD70"/>
+</associations>
+</Column>
+<Column name="destination_station" id="1774EFD0-A131-6381-0355-4F63D2CF7F86">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>2CAC99DB-B828-2F64-463F-2AECDC7405DF</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="371C7142-A3F7-CC24-25FC-D47E886472CA" referredColumn="82CED087-2613-5861-81F9-7DF62F2ECD70"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EAA4ED9D-9F25-3B47-B1BB-A6774871B481" name="TRIPS_PK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>5A38EEF1-D5FA-339C-03EC-2BE5E27D3844</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB308FE0-9566-E70C-7DD4-D8D1FEB4E11C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="776D6BCF-30E1-9383-51DB-3A16F701A540" name="TRIPS_STATIONS_FK">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>AFCB8AB5-F022-6A37-BE75-854B9CCED88D</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14360097-0550-6D18-2842-BF6AB77087A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E88916B-C590-3A05-A34F-F337693679DA" name="TRIPS_STATIONS_FKv2">
+<createdBy>anast</createdBy>
+<createdTime>2021-05-02 16:45:39 UTC</createdTime>
+<generatorID>D2970979-8B30-49BC-B51F-22B3346B814F</generatorID>
+<ownerDesignName>diagrams</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1774EFD0-A131-6381-0355-4F63D2CF7F86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
