@@ -1,0 +1,29 @@
+* {
+  font-family: "Lucida Console";
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: lowercase;
+  color: red;
+}
+
+p {
+  font-size: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-size: 60px;
+}

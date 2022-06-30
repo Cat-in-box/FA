@@ -1,0 +1,62 @@
+* {
+   box-sizing: border-box;
+}
+body {
+   background: #FFF2E3;
+}
+.studentsList {
+   position: relative;
+   max-width: 320px;
+   margin: 50px auto 0;
+   text-align: center;
+}
+.form-inner {
+   padding: 10px 40px 10px;
+   background: #ffffff;
+   border-radius: 2px;
+   box-shadow: 0 0 6px 1px rgba(0, 0, 0, .1);
+}
+.form-inner h2 {
+   font-weight: 300;
+   text-transform: uppercase;
+   font-family: 'Cormorant Garamond', serif;
+   margin: 0 0 6px;
+}
+.form-content {
+   position: relative;
+   margin: 0px;
+   padding: 10px 40px 10px 40px;
+   background: #FFF8F3;
+   
+}
+.form-content:before {
+   content: "";
+   position: absolute;
+   top: -4px;
+   right: 0;
+   left: 0;
+   height: 2px;
+   border-top: 1px solid #DDDDDD;
+   border-bottom: 1px solid #DDDDDD;
+}
+.form-content .item {
+   font-family: 'Marck Script', cursive;
+   font-size: 22px;
+   color: #898989;
+   font-weight: normal;
+}
+input {
+   height: 38px;
+   line-height: 38px;
+   padding: 0 10px;
+   background: #ffffff;
+   border: 1px solid #DDDDDD;
+   font-size: 20px;
+   font-family: 'Cormorant Garamond', serif;
+   color: #808080;
+   outline: none;
+   width: 100%;
+}
+input:focus {
+   border-color: #C44D58;
+}

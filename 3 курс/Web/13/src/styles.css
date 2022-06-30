@@ -1,0 +1,109 @@
+* {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #707981;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f69a73;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.content {
+  margin-top: 40px;
+  border: 5px #ffffff solid;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+td:first-child {
+  width: 100%;
+  text-align: left;
+}
+
+td:last-child {
+  min-width: 100px;
+}
+
+input[type="checkbox"]:checked {
+  filter: hue-rotate(140deg) brightness(3.3);
+}
+
+input,
+button {
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 0px 5px 0px;
+  border-radius: 5px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input {
+  background-color: #f0f0f0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+}
+
+.task {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
