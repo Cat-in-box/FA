@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+</head>
+<body>
+
+    <!--опишем объект-->
+    <script type="text/babel">
+        ReactDOM.render(
+            <h2>5 + 2 = {5 + 2}</h2>,
+            document.getElementById("app")
+        )
+
+        const userClassName = "user-info";
+        const styleObj = {
+            color:'red', 
+            fontFamily:'Verdana'
+        };
+
+        const user = {
+            id : 4,
+            age: 20,
+            firstName: 'Anastasiya',
+            lastName: 'Zhevagina',
+            getFullName: function(){ 
+                return `${this.firstName} ${this.lastName}`;
+            }
+        };
+
+        ReactDOM.render(
+            <div className={userClassName}  style={styleObj}>
+                    <p>Полное имя: {user.getFullName()}</p>
+                    <p>Возраст: {user.age}</p>
+            </div>,
+            document.getElementById("example")
+        )
+
+    </script>
+    <!--поместим описанный объект-->
+    <div id="app"> </div>
+    <div id="example"> </div>
+</body>
+</html> 
+    

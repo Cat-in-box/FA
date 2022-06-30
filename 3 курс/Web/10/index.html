@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Хуки</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/babel">        
+        function App() {
+            const [count, setCount] = React.useState(0);
+            const [age, setAge] = React.useState(42);
+            const [fruit, setFruit] = React.useState('банан');
+            const [todos, setTodos] = React.useState([{ text: 'Изучить хуки' }]);
+
+            return (
+                <div>
+                    <div>
+                        <p>Вы нажали {count} раз</p>
+                        <button onClick={() => setCount(count + 1)}>
+                            Нажми на меня
+                        </button>
+                    </div>
+
+                    <div>
+                        <p>Вы ввели возраст {age}</p>
+                        <input onChange={e => setAge(e.target.value)}></input>
+                    </div>
+
+                    <div>
+                        <p>
+                            <button onClick={e => setFruit(fruit.toUpperCase())}>
+                                {fruit}
+                            </button>
+                        </p>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>{todos[0]["text"]}</li>
+                        </ul>
+                        <button onClick={() => setTodos([{}])}>
+                            done
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("app")
+        )
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet">
+    <title>Какой-то html</title>
+</head>
+    
+<body>
+	<h1 align="center">Cute cats</h1>
+	
+	<div class="grid-wrap">
+		<div class="grid">
+		  <div class="grid-item">
+			<img src="cat1.jpg" width="380px" height="285">
+			<div id='like_button_container' data-catid="1"></div>
+		  </div>
+		  <div class="grid-item">
+			<img src="cat2.jpg" width="380px" height="285">
+			<div id='like_button_container' data-catid="2"></div>
+		  </div>
+		  <div class="grid-item">
+			<img src="cat3.jpg" width="380px" height="285">
+			<div id='like_button_container' data-catid="3"></div>
+		  </div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	<script src="like_button.js"></script>
+
+</body>
+</html>

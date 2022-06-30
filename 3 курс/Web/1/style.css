@@ -1,0 +1,17 @@
+body{
+    background-image: url(background.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.grid-wrap {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.grid .grid-item {
+    margin: 5px;
+    width: 380px;
+    float: left;
+  }
