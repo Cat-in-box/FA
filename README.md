@@ -21,6 +21,6 @@
 * [Управление качеством программных систем](https://github.com/Cat-in-box/FA/tree/2/2%20%D0%BA%D1%83%D1%80%D1%81/%D0%A3%D0%9A%D0%9F%D0%A1)
 
 ## 3 курс
-* [Обработка данных и моделирование в Microsoft Excel](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/Excel)
-* [Технологии обработки больших данных (Python)](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94)
-* [Технологии разработки web-приложений](https://github.com/Cat-in-box/FA/tree/3-%D0%BA%D1%83%D1%80%D1%81/3%20%D0%BA%D1%83%D1%80%D1%81/Web)
+* [Обработка данных и моделирование в Microsoft Excel](https://github.com/Cat-in-box/FA/tree/3/3%20%D0%BA%D1%83%D1%80%D1%81/Excel)
+* [Технологии обработки больших данных (Python)](https://github.com/Cat-in-box/FA/tree/3/3%20%D0%BA%D1%83%D1%80%D1%81/%D0%A2%D0%9E%D0%91%D0%94)
+* [Технологии разработки web-приложений](https://github.com/Cat-in-box/FA/tree/3/3%20%D0%BA%D1%83%D1%80%D1%81/Web)
